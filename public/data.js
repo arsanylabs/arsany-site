@@ -29,6 +29,7 @@
 window.SITE = {
   companies: {
     stackdrop: { name: 'Stackdrop', website: 'https://stackdrop.co', logo: 'logos/stackdrop.png', logoTile: true, mark: 'SD' },
+    spare: { name: 'Spare', website: 'https://tryspare.com', logo: null, mark: 'S' },
     wayve: { name: 'Wayve', website: 'https://wayve.ai', logo: 'logos/wayve.png', logoTile: true, mark: 'W' }
   },
 
@@ -91,6 +92,16 @@ window.SITE = {
         { id: 'calls', title: 'Client Calls', desc: 'Talking to clients directly about scope and what they need next.', dur: 164 },
         { id: 'demos', title: 'Demos', desc: 'Demoing the work back to clients.', dur: 151 },
         { id: 'retool', title: 'Retool Apps and Tooling', desc: 'Retool apps and the tooling around them, including the Local Runner.', dur: 209 }
+      ]
+    },
+    {
+      id: 'spare', kind: 'collab', with: 'spare', title: 'Spare',
+      cover: { mark: 'S', c1: '#16b3c9', c2: '#0b3d5c', pattern: 'split' },
+      blurb: 'Spare Payments is an open banking fintech headquartered in Saudi Arabia, building Pay by Bank and financial data APIs across the GCC. My first job, before Stackdrop.',
+      credits: [['Company', 'Open banking fintech'], ['HQ', 'Saudi Arabia'], ['Came before', 'Stackdrop']],
+      links: [],
+      tracks: [
+        { id: 'first', title: 'First Job', desc: 'Where I started, before joining Stackdrop.', dur: 201 }
       ]
     }
   ]
