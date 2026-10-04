@@ -264,6 +264,7 @@ section.block > h2 { margin-bottom: 16px; }
 
 .logo-mark { max-height: 22cqi; max-width: 46cqi; filter: brightness(0) invert(1); }
 .logo-mark.tile { filter: none; width: 30cqi; height: 30cqi; max-height: none; max-width: none; border-radius: 18%; object-fit: cover; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
+.logo-mark.solo { max-width: 72cqi; max-height: 40cqi; }
 .logo-mark.tile.solo { width: 52cqi; height: 52cqi; }
 .guest-logo img.tile { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
 .guests { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -548,7 +549,7 @@ a.guest:hover { background: var(--raise); }
           ? '<img class="logo-mark' + (partner.logoTile ? ' tile' : '') + '" src="' + esc(partner.logo) + '" alt="">'
           : '<span>' + esc(partner.mark || c.mark) + '</span>')
       : c.logo
-        ? '<img class="logo-mark tile solo" src="' + esc(c.logo) + '" alt="">'
+        ? '<img class="logo-mark solo' + (c.logoTile ? ' tile' : '') + '" src="' + esc(c.logo) + '" alt="">'
         : '<span>' + esc(c.mark) + '</span>';
     return '<div class="art pat-' + c.pattern + (r.with ? ' is-collab' : '') + (cls ? ' ' + cls : '') +
       '" style="--c1:' + c.c1 + ';--c2:' + c.c2 + '" aria-hidden="true"><div class="marks">' + marks + '</div></div>';

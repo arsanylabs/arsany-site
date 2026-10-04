@@ -8,8 +8,9 @@
      label     optional id of a collab the release came out of ("℗ Stackdrop")
      year      optional, shown in the release header
      cover     generated cover art: mark (1-2 letters), two colors, pattern
-               (rings | dots | grid | stripes | split), and an optional logo
-               (square app icon under public/logos/) shown instead of the mark
+               (rings | dots | grid | stripes | split), and an optional logo under
+               public/logos/ shown instead of the mark (logoTile: true for square
+               app icons; otherwise the logo is drawn in white)
      credits   [label, value] pairs shown under the tracklist
      links     [{ label, href }] buttons in the release header
 
@@ -38,7 +39,7 @@ window.SITE = {
   releases: [
     {
       id: 'dentica', kind: 'album', title: 'Dentica',
-      cover: { mark: 'D', logo: 'logos/dentica.png', c1: '#6b2d5c', c2: '#1f1a17', pattern: 'rings' },
+      cover: { mark: 'D', logo: 'logos/dentica.png', logoTile: true, c1: '#4a4044', c2: '#1f1a17', pattern: 'rings' },
       blurb: 'Dental practice management for Egypt, for solo doctors and clinics, on web and mobile. I founded it and I am building the MVP: a 41-table data model with soft deletes and append-only history, covered by 53 test files.',
       credits: [['Role', 'Founder'], ['Status', 'MVP in progress'], ['Stack', 'NestJS, Prisma, Postgres (Supabase), Better Auth, Expo, TanStack Query, Turborepo'], ['Market', 'Egypt']],
       links: [],
@@ -50,7 +51,7 @@ window.SITE = {
     },
     {
       id: 'viorette', kind: 'ep', title: 'Viorette',
-      cover: { mark: 'V', c1: '#a9a2bd', c2: '#3f3a55', pattern: 'dots' },
+      cover: { mark: 'V', logo: 'logos/viorette.png', c1: '#7a3d6e', c2: '#2b1328', pattern: 'dots' },
       blurb: 'Sterling silver jewelry for women in Egypt and the MENA region. A year-long side hustle with my cofounder: we did everything together, from the store and the designs to marketing and shipping, and grew it to 300 orders a month at break-even before I exited.',
       credits: [['Role', 'Cofounder'], ['Run', 'One year, as a side hustle'], ['Peak', '300 orders a month, break-even'], ['Stack', 'WooCommerce, then Shopify, with Bosta for delivery'], ['Market', 'Egypt and MENA']],
       links: [],
