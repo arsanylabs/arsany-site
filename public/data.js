@@ -29,6 +29,7 @@
 window.SITE = {
   companies: {
     stackdrop: { name: 'Stackdrop', website: 'https://stackdrop.co', logo: 'logos/stackdrop.png', logoTile: true, mark: 'SD' },
+    hubrural: { name: 'Hub Rural', website: 'https://www.hubrural.co.uk', logo: null, mark: 'HR' },
     spare: { name: 'Spare', website: 'https://tryspare.com', logo: 'logos/spare.png', logoTile: true, mark: 'S' },
     wayve: { name: 'Wayve', website: 'https://wayve.ai', logo: 'logos/wayve.png', logoTile: true, mark: 'W' }
   },
@@ -82,12 +83,13 @@ window.SITE = {
     {
       id: 'stackdrop', kind: 'collab', with: 'stackdrop', title: 'Stackdrop', current: true,
       cover: { mark: 'SD', c1: '#f5a512', c2: '#5c3a06', pattern: 'split' },
-      blurb: 'Remote-first software house headquartered in Athens, with most of the engineers in Egypt. I work as an independent contractor across several client projects at once, including an embedded engagement with Wayve.',
+      blurb: 'Remote-first software house headquartered in Athens, with most of the engineers in Egypt. I work as an independent contractor across several client projects at once, including an embedded engagement with Wayve and work for Hub Rural.',
       credits: [['Role', 'Senior Fullstack Engineer'], ['Terms', 'Independent contractor'], ['HQ', 'Athens, Greece']],
       links: [],
       tracks: [
         { id: 'wayve-eng', title: 'Embedded Engineering', feat: 'wayve', desc: 'Embedded in the team at Wayve, an autonomous driving AI company.', dur: 223 },
         { id: 'wayve-po', title: 'Product Owner', feat: 'wayve', desc: 'Covering the product owner role on the Wayve engagement, alongside the engineering.', dur: 205, popular: 3 },
+        { id: 'hubrural', title: 'Client Build', feat: 'hubrural', desc: 'Built through Stackdrop for Hub Rural, a farm property and business advisory firm in Lincolnshire, UK.', dur: 218 },
         { id: 'builds', title: 'Client Builds', desc: 'Building across several client projects at once.', dur: 232 },
         { id: 'calls', title: 'Client Calls', desc: 'Talking to clients directly about scope and what they need next.', dur: 164 },
         { id: 'demos', title: 'Demos', desc: 'Demoing the work back to clients.', dur: 151 },
