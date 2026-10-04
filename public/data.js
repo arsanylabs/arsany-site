@@ -49,18 +49,38 @@ window.SITE = {
         { id: 'web', title: 'Dentica Web', desc: 'The practice management platform in the browser, for solo doctors and clinics.', dur: 214, lyrics: [
           'Dentica Web is the practice management platform in the browser.',
           'Built for solo doctors and for clinics in Egypt.',
-          'Underneath it, a 41-table data model.',
-          'Soft deletes, so nothing a clinic records is lost by accident.',
-          'Append-only history, so every change can be traced.',
-          'NestJS and Prisma on Postgres, hosted on Supabase.',
-          'Better Auth for sign-in.',
-          '53 test files keeping it honest.'
+          'One product for the doctor working alone',
+          'and for the clinic with a team.'
         ], popular: 1 },
-        { id: 'mobile', title: 'Dentica Mobile', desc: 'The same platform on mobile.', dur: 196, lyrics: [
+        { id: 'data-model', title: '41 Tables', desc: 'The data model: 41 tables, soft deletes and append-only history.', dur: 203, lyrics: [
+          'Underneath it all, a 41-table data model.',
+          'Soft deletes,',
+          'so nothing a clinic records is lost by accident.',
+          'Append-only history,',
+          'so every change can be traced.'
+        ] },
+        { id: 'api', title: 'The API', desc: 'NestJS and Prisma on Postgres, hosted on Supabase.', dur: 192, lyrics: [
+          'The API is NestJS.',
+          'Prisma talks to Postgres.',
+          'Postgres lives on Supabase.'
+        ] },
+        { id: 'auth', title: 'Sign In', desc: 'Authentication with Better Auth.', dur: 168, lyrics: [
+          'Who gets in, and as whom.',
+          'Sign-in runs on Better Auth.'
+        ] },
+        { id: 'mobile', title: 'Dentica Mobile', desc: 'The same platform on mobile, built with Expo.', dur: 196, lyrics: [
           'The same platform, on mobile.',
           'Built with Expo.',
-          'One Turborepo for web, mobile and the API.',
           'TanStack Query keeping the data in sync.'
+        ] },
+        { id: 'monorepo', title: 'One Repo', desc: 'Web, mobile and the API in one Turborepo.', dur: 175, lyrics: [
+          'Web, mobile and the API.',
+          'One Turborepo holds them all.'
+        ] },
+        { id: 'tests', title: '53 Test Files', desc: 'The test suite behind the MVP.', dur: 181, lyrics: [
+          '53 test files.',
+          'Keeping the MVP honest',
+          'while it is still being built.'
         ] },
         { id: 'lite', title: 'Dentica Lite', desc: 'A lighter companion app made only for doctors.', dur: 187, lyrics: [
           'Dentica Lite.',
