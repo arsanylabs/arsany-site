@@ -30,7 +30,7 @@ window.SITE = {
   companies: {
     stackdrop: { name: 'Stackdrop', website: 'https://stackdrop.co', logo: 'logos/stackdrop.png', logoTile: true, mark: 'SD' },
     hubrural: { name: 'Hub Rural', website: 'https://www.hubrural.co.uk', logo: null, mark: 'HR' },
-    spare: { name: 'Spare', website: 'https://tryspare.com', logo: 'logos/spare.png', logoTile: true, mark: 'S' },
+    spare: { name: 'Spare', website: null, logo: 'logos/spare.png', logoTile: true, mark: 'S' },
     wayve: { name: 'Wayve', website: 'https://wayve.ai', logo: 'logos/wayve.png', logoTile: true, mark: 'W' }
   },
 
@@ -38,8 +38,8 @@ window.SITE = {
     {
       id: 'dentica', kind: 'album', title: 'Dentica',
       cover: { mark: 'D', c1: '#19b06a', c2: '#0a4a33', pattern: 'rings' },
-      blurb: 'Dental practice management for Egypt, for solo doctors and clinics, on web and mobile.',
-      credits: [['Role', 'Creator'], ['Platforms', 'Web + mobile'], ['Market', 'Egypt']],
+      blurb: 'Dental practice management for Egypt, for solo doctors and clinics, on web and mobile. I founded it and I am building the MVP: a 41-table data model with soft deletes and append-only history, covered by 53 test files.',
+      credits: [['Role', 'Founder'], ['Status', 'MVP in progress'], ['Stack', 'NestJS, Prisma, Postgres (Supabase), Better Auth, Expo, TanStack Query, Turborepo'], ['Market', 'Egypt']],
       links: [],
       tracks: [
         { id: 'web', title: 'Dentica Web', desc: 'The practice management platform in the browser, for solo doctors and clinics.', dur: 214, popular: 1 },
@@ -61,13 +61,26 @@ window.SITE = {
       ]
     },
     {
-      id: 'retool-runner', kind: 'single', title: 'Retool React Local Runner', label: 'stackdrop',
-      cover: { mark: 'R', c1: '#3d4ad6', c2: '#121641', pattern: 'grid' },
-      blurb: 'Runs Retool Apps-as-Code React apps on your own machine, driven over MCP. Open source, built at Stackdrop.',
-      credits: [['Role', 'Author'], ['License', 'Open source']],
+      id: 'retool-bridge', kind: 'single', title: 'Retool Bridge', label: 'stackdrop',
+      cover: { mark: 'RB', c1: '#3d4ad6', c2: '#121641', pattern: 'grid' },
+      blurb: 'Open source. Runs Retool Apps-as-Code React apps on your own machine, driven over MCP, with each session isolated in its own git worktree and read-only by default.',
+      credits: [['Role', 'Author'], ['License', 'Open source'], ['Tests', '~90']],
       links: [],
       tracks: [
-        { id: 'runner', title: 'Retool React Local Runner', desc: 'Runs Retool Apps-as-Code React apps on your own machine, driven over MCP.', dur: 241, popular: 2 }
+        { id: 'bridge', title: 'Retool Bridge', desc: 'Runs Retool Apps-as-Code React apps locally, driven over MCP.', dur: 241, popular: 2 },
+        { id: 'worktrees', title: 'Worktree Isolation', desc: 'Every session gets its own git worktree, so experiments never touch your checkout.', dur: 188 },
+        { id: 'readonly', title: 'Read-Only by Default', desc: 'Nothing writes back to Retool unless you explicitly allow it.', dur: 162 }
+      ]
+    },
+    {
+      id: 'marathon-navigator', kind: 'single', title: 'Marathon Navigator', year: 'Live',
+      cover: { mark: 'MN', c1: '#e2524a', c2: '#4a1414', pattern: 'stripes' },
+      blurb: 'A live mobile app for charity youth competitions, in English and Arabic with full right-to-left support.',
+      credits: [['Role', 'Builder'], ['Stack', 'React Native, Expo, Supabase'], ['Languages', 'English, Arabic (RTL)']],
+      links: [],
+      tracks: [
+        { id: 'app', title: 'Marathon Navigator', desc: 'Live app for running charity youth competitions, built with React Native, Expo and Supabase.', dur: 207 },
+        { id: 'rtl', title: 'Right to Left', desc: 'Full English and Arabic support, including RTL layouts.', dur: 174 }
       ]
     },
     {
@@ -83,27 +96,35 @@ window.SITE = {
     {
       id: 'stackdrop', kind: 'collab', with: 'stackdrop', title: 'Stackdrop', current: true,
       cover: { mark: 'SD', c1: '#f5a512', c2: '#5c3a06', pattern: 'split' },
-      blurb: 'Remote-first software house headquartered in Athens, with most of the engineers in Egypt. I work as an independent contractor across several client projects at once, including an embedded engagement with Wayve and work for Hub Rural.',
-      credits: [['Role', 'Senior Fullstack Engineer'], ['Terms', 'Independent contractor'], ['HQ', 'Athens, Greece']],
+      year: 'Apr 2024 – now',
+      blurb: 'Remote-first software house headquartered in Athens. I work as a contractor across several client projects at once. The headline engagement is Wayve, where I am the Retool engineer and product owner for the Fleet Systems & Insights portfolio: 5+ apps used across the UK, US, Germany and Japan.',
+      credits: [['Role', 'Senior Software Engineer'], ['Terms', 'Contract'], ['Dates', 'Apr 2024 – present'], ['HQ', 'Athens, Greece']],
       links: [],
       tracks: [
-        { id: 'wayve-eng', title: 'Embedded Engineering', feat: 'wayve', desc: 'Embedded in the team at Wayve, an autonomous driving AI company.', dur: 223 },
-        { id: 'wayve-po', title: 'Product Owner', feat: 'wayve', desc: 'Covering the product owner role on the Wayve engagement, alongside the engineering.', dur: 205, popular: 3 },
-        { id: 'hubrural', title: 'Client Build', feat: 'hubrural', desc: 'Built through Stackdrop for Hub Rural, a farm property and business advisory firm in Lincolnshire, UK.', dur: 218 },
-        { id: 'builds', title: 'Client Builds', desc: 'Building across several client projects at once.', dur: 232 },
-        { id: 'calls', title: 'Client Calls', desc: 'Talking to clients directly about scope and what they need next.', dur: 164 },
-        { id: 'demos', title: 'Demos', desc: 'Demoing the work back to clients.', dur: 151 },
-        { id: 'retool', title: 'Retool Apps and Tooling', desc: 'Retool apps and the tooling around them, including the Local Runner.', dur: 209 }
+        { id: 'shift-dashboard', title: 'Shift Utilization Dashboard', feat: 'wayve', desc: 'Replaced Grafana. 216 tests, and it reconciles to within about a point where the old numbers drifted 3 to 9 points apart.', dur: 236, popular: 3 },
+        { id: 'shift-clock', title: 'Shift Utilisation Clock', feat: 'wayve', desc: 'A kiosk view of shift utilisation for the floor.', dur: 172 },
+        { id: 'gap-review', title: 'Gap Review', feat: 'wayve', desc: 'A workflow for reviewing and explaining gaps in utilisation.', dur: 181 },
+        { id: 'annotation', title: 'Annotation Platform', feat: 'wayve', desc: 'The platform the annotation work runs on.', dur: 224 },
+        { id: 'allocation', title: 'Allocation Engine', feat: 'wayve', desc: 'A list-based engine for allocating work.', dur: 198 },
+        { id: 'etl', title: 'Annotations Reporting ETL', feat: 'wayve', desc: 'Moves annotation data from Lakebase into Delta for reporting. I introduced Lakebase to the team.', dur: 211 },
+        { id: 'sci', title: 'Safety-Critical Interventions', feat: 'wayve', desc: 'A dashboard for safety-critical interventions.', dur: 203 },
+        { id: 'hubrural', title: 'Compliance & CRM Platform', feat: 'hubrural', desc: 'Retool and Postgres platform for Hub Rural, a UK land agency: AML compliance, a workflow engine, DocuSign and S3.', dur: 228 },
+        { id: 'retail', title: 'Retail Data Platform', desc: 'Data platform for a global spirits group.', dur: 195 },
+        { id: 'healthcare', title: 'Healthcare Platform', desc: 'A platform for a healthcare client.', dur: 187 },
+        { id: 'entertainment', title: 'Entertainment & Data Platform', desc: 'Cut load times by about half and moved auth to Cognito.', dur: 201 }
       ]
     },
     {
       id: 'spare', kind: 'collab', with: 'spare', title: 'Spare',
       cover: { mark: 'S', c1: '#16b3c9', c2: '#0b3d5c', pattern: 'split' },
-      blurb: 'Spare Payments is an open banking fintech headquartered in Saudi Arabia, building Pay by Bank and financial data APIs across the GCC. My first job, before Stackdrop.',
-      credits: [['Company', 'Open banking fintech'], ['HQ', 'Saudi Arabia'], ['Came before', 'Stackdrop']],
+      year: 'Sep 2022 – Mar 2024',
+      blurb: 'Spare, Schools Made Smarter. My first job, before Stackdrop: building features end to end, from the MySQL schema through the Node.js APIs to the Angular front end.',
+      credits: [['Role', 'Software Engineer'], ['Dates', 'Sep 2022 – Mar 2024'], ['Location', 'Remote'], ['Came before', 'Stackdrop']],
       links: [],
       tracks: [
-        { id: 'first', title: 'First Job', desc: 'Where I started, before joining Stackdrop.', dur: 201 }
+        { id: 'features', title: 'End to End', desc: 'Features from the MySQL schema through Node.js APIs to Angular.', dur: 214 },
+        { id: 'big-deal', title: 'The Big Deal', desc: 'Engineering work supporting one of the largest client deals.', dur: 197 },
+        { id: 'tooling', title: 'Seeders, Biome and Husky', desc: 'Database seeders plus Biome and Husky for a cleaner, faster dev loop.', dur: 168 }
       ]
     }
   ]
