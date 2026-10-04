@@ -263,6 +263,8 @@ section.block > h2 { margin-bottom: 16px; }
 .track.current .t-title .feat { color: inherit; }
 
 .logo-mark { max-height: 22cqi; max-width: 46cqi; filter: brightness(0) invert(1); }
+.logo-mark.tile { filter: none; width: 30cqi; height: 30cqi; max-height: none; max-width: none; border-radius: 18%; object-fit: cover; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
+.guest-logo img.tile { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
 .guests { display: flex; flex-wrap: wrap; gap: 12px; }
 .guest { display: flex; align-items: center; gap: 14px; padding: 10px 20px 10px 10px; border-radius: 999px; background: var(--panel-2); text-decoration: none; }
 a.guest:hover { background: var(--raise); }
@@ -538,7 +540,7 @@ a.guest:hover { background: var(--raise); }
     var partner = r.with && co(r.with);
     var marks = partner
       ? '<span>A</span><span class="x">×</span>' + (partner.logo
-          ? '<img class="logo-mark" src="' + esc(partner.logo) + '" alt="">'
+          ? '<img class="logo-mark' + (partner.logoTile ? ' tile' : '') + '" src="' + esc(partner.logo) + '" alt="">'
           : '<span>' + esc(partner.mark || c.mark) + '</span>')
       : '<span>' + esc(c.mark) + '</span>';
     return '<div class="art pat-' + c.pattern + (r.with ? ' is-collab' : '') + (cls ? ' ' + cls : '') +
@@ -627,7 +629,7 @@ a.guest:hover { background: var(--raise); }
       '</dl></section>' +
       (feats.length ? '<section class="block"><h2>Featuring</h2><div class="guests">' + feats.map(function (id) {
         var c = co(id);
-        var inner = '<span class="guest-logo">' + (c.logo ? '<img src="' + esc(c.logo) + '" alt="">' : esc(c.mark)) + '</span>' +
+        var inner = '<span class="guest-logo">' + (c.logo ? '<img' + (c.logoTile ? ' class="tile"' : '') + ' src="' + esc(c.logo) + '" alt="">' : esc(c.mark)) + '</span>' +
           '<span><strong>' + esc(c.name) + '</strong>' + (c.website ? '<span class="sub">' + esc(c.website.replace(/^https?:\/\//, '')) + '</span>' : '') + '</span>';
         return c.website ? '<a class="guest" href="' + esc(c.website) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<div class="guest">' + inner + '</div>';
       }).join('') + '</div></section>' : '') +

@@ -22,11 +22,13 @@
      name      display name
      website   full URL, shown as a "Visit" button (null hides it)
      logo      path under public/, e.g. 'logos/wayve.svg' (null falls back to `mark`)
+     logoTile  true when the logo is a square app icon with its own background
+               (shown as a rounded tile); otherwise the logo is drawn in white
      mark      1-2 letters used on the cover when there's no logo */
 
 window.SITE = {
   companies: {
-    stackdrop: { name: 'Stackdrop', website: null, logo: null, mark: 'SD' },
+    stackdrop: { name: 'Stackdrop', website: 'https://stackdrop.co', logo: 'logos/stackdrop.png', logoTile: true, mark: 'SD' },
     wayve: { name: 'Wayve', website: 'https://wayve.ai', logo: null, mark: 'W' }
   },
 
@@ -78,7 +80,7 @@ window.SITE = {
     },
     {
       id: 'stackdrop', kind: 'collab', with: 'stackdrop', title: 'Stackdrop', current: true,
-      cover: { mark: 'SD', c1: '#0f7a50', c2: '#0a3a52', pattern: 'split' },
+      cover: { mark: 'SD', c1: '#f5a512', c2: '#5c3a06', pattern: 'split' },
       blurb: 'Remote-first software house headquartered in Athens, with most of the engineers in Egypt. I work as an independent contractor across several client projects at once, including an embedded engagement with Wayve.',
       credits: [['Role', 'Senior Fullstack Engineer'], ['Terms', 'Independent contractor'], ['HQ', 'Athens, Greece']],
       links: [],
