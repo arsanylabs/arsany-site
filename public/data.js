@@ -19,6 +19,8 @@
      feat      optional id of a company in `companies`, shown as "feat. Wayve"
      popular   optional rank (1 = top) to list it under Popular on the home page
      dur       track length in seconds (it's a music player, after all)
+     lyrics    lines shown in the lyrics view when the track is clicked
+               (falls back to desc)
 
    Company fields
      name      display name
@@ -44,9 +46,27 @@ window.SITE = {
       credits: [['Role', 'Founder'], ['Status', 'MVP in progress'], ['Stack', 'NestJS, Prisma, Postgres (Supabase), Better Auth, Expo, TanStack Query, Turborepo'], ['Market', 'Egypt']],
       links: [],
       tracks: [
-        { id: 'web', title: 'Dentica Web', desc: 'The practice management platform in the browser, for solo doctors and clinics.', dur: 214, popular: 1 },
-        { id: 'mobile', title: 'Dentica Mobile', desc: 'The same platform on mobile.', dur: 196 },
-        { id: 'lite', title: 'Dentica Lite', desc: 'A lighter companion app made only for doctors.', dur: 187, popular: 5 }
+        { id: 'web', title: 'Dentica Web', desc: 'The practice management platform in the browser, for solo doctors and clinics.', dur: 214, lyrics: [
+          'Dentica Web is the practice management platform in the browser.',
+          'Built for solo doctors and for clinics in Egypt.',
+          'Underneath it, a 41-table data model.',
+          'Soft deletes, so nothing a clinic records is lost by accident.',
+          'Append-only history, so every change can be traced.',
+          'NestJS and Prisma on Postgres, hosted on Supabase.',
+          'Better Auth for sign-in.',
+          '53 test files keeping it honest.'
+        ], popular: 1 },
+        { id: 'mobile', title: 'Dentica Mobile', desc: 'The same platform on mobile.', dur: 196, lyrics: [
+          'The same platform, on mobile.',
+          'Built with Expo.',
+          'One Turborepo for web, mobile and the API.',
+          'TanStack Query keeping the data in sync.'
+        ] },
+        { id: 'lite', title: 'Dentica Lite', desc: 'A lighter companion app made only for doctors.', dur: 187, lyrics: [
+          'Dentica Lite.',
+          'A lighter companion app,',
+          'made only for doctors.'
+        ], popular: 5 }
       ]
     },
     {
@@ -56,12 +76,33 @@ window.SITE = {
       credits: [['Role', 'Cofounder'], ['Run', 'One year, as a side hustle'], ['Peak', '300 orders a month, break-even'], ['Stack', 'WooCommerce, then Shopify, with Bosta for delivery'], ['Market', 'Egypt and MENA']],
       links: [],
       tracks: [
-        { id: 'store', title: 'The Store', desc: 'Started on WooCommerce, then moved to Shopify.', dur: 198, popular: 4 },
-        { id: 'designs', title: 'Designs', desc: 'The jewelry designs and the brand look, worked out together.', dur: 186 },
-        { id: 'marketing', title: 'Marketing', desc: 'We ran the marketing ourselves.', dur: 171 },
-        { id: 'delivery', title: 'Delivery', desc: 'Shipping orders across Egypt with Bosta.', dur: 159 },
-        { id: 'scale', title: '300 a Month', desc: 'Grew to 300 orders a month and broke even.', dur: 204 },
-        { id: 'exit', title: 'The Exit', desc: 'I exited to found Dentica, a product closer to what I do best.', dur: 142 }
+        { id: 'store', title: 'The Store', desc: 'Started on WooCommerce, then moved to Shopify.', dur: 198, lyrics: [
+          'Sterling silver jewelry for women in Egypt and MENA.',
+          'We started the store on WooCommerce.',
+          'Then moved it to Shopify.'
+        ], popular: 4 },
+        { id: 'designs', title: 'Designs', desc: 'The jewelry designs and the brand look, worked out together.', dur: 186, lyrics: [
+          'The jewelry designs and the brand look.',
+          'Worked out together, my cofounder and me.'
+        ] },
+        { id: 'marketing', title: 'Marketing', desc: 'We ran the marketing ourselves.', dur: 171, lyrics: [
+          'No agency.',
+          'We ran the marketing ourselves.'
+        ] },
+        { id: 'delivery', title: 'Delivery', desc: 'Shipping orders across Egypt with Bosta.', dur: 159, lyrics: [
+          'Orders shipped across Egypt',
+          'with Bosta.'
+        ] },
+        { id: 'scale', title: '300 a Month', desc: 'Grew to 300 orders a month and broke even.', dur: 204, lyrics: [
+          'A side hustle, one year long.',
+          'We grew it to 300 orders a month.',
+          'And it broke even.'
+        ] },
+        { id: 'exit', title: 'The Exit', desc: 'I exited to found Dentica, a product closer to what I do best.', dur: 142, lyrics: [
+          'Then I stepped away.',
+          'To found Dentica,',
+          'a product closer to what I do best.'
+        ] }
       ]
     },
     {
@@ -71,9 +112,18 @@ window.SITE = {
       credits: [['Role', 'Author'], ['License', 'Open source'], ['Tests', '~90']],
       links: [],
       tracks: [
-        { id: 'bridge', title: 'Retool Bridge', desc: 'Runs Retool Apps-as-Code React apps locally, driven over MCP.', dur: 241, popular: 2 },
-        { id: 'worktrees', title: 'Worktree Isolation', desc: 'Every session gets its own git worktree, so experiments never touch your checkout.', dur: 188 },
-        { id: 'readonly', title: 'Read-Only by Default', desc: 'Nothing writes back to Retool unless you explicitly allow it.', dur: 162 }
+        { id: 'bridge', title: 'Retool Bridge', desc: 'Runs Retool Apps-as-Code React apps locally, driven over MCP.', dur: 241, popular: 2, lyrics: [
+          'Retool Apps-as-Code,',
+          'running on your own machine.',
+          'React apps, driven over MCP.',
+          'Open source, built at Stackdrop.',
+          'Around 90 tests behind it.',
+          'Every session gets its own git worktree.',
+          'Experiments never touch your checkout.',
+          'Read-only by default.',
+          'Nothing writes back to Retool',
+          'unless you allow it.'
+        ] }
       ]
     },
     {
@@ -83,8 +133,13 @@ window.SITE = {
       credits: [['Role', 'Builder'], ['Stack', 'React Native, Expo, Supabase'], ['Languages', 'English, Arabic (RTL)']],
       links: [],
       tracks: [
-        { id: 'app', title: 'Marathon Navigator', desc: 'Live app for running charity youth competitions, built with React Native, Expo and Supabase.', dur: 207 },
-        { id: 'rtl', title: 'Right to Left', desc: 'Full English and Arabic support, including RTL layouts.', dur: 174 }
+        { id: 'app', title: 'Marathon Navigator', desc: 'Live app for charity youth competitions, in English and Arabic.', dur: 207, lyrics: [
+          'A live app for charity youth competitions.',
+          'React Native and Expo on the phone.',
+          'Supabase behind it.',
+          'English and Arabic.',
+          'Full right-to-left layouts.'
+        ] }
       ]
     },
     {
@@ -94,9 +149,21 @@ window.SITE = {
       credits: [['Role', 'Author'], ['License', 'Open source'], ['Stack', 'Angular 19, Node.js, Express, FastAPI, PostgreSQL, DeepSeek']],
       links: [{ label: 'GitHub', href: 'https://github.com/arsanylabs/Knowledge-hub' }],
       tracks: [
-        { id: 'upload', title: 'Upload Knowledge', desc: 'Bring your own text and JSON files as the knowledge base.', dur: 176 },
-        { id: 'ask', title: 'Ask in Plain Language', desc: 'Retrieval over local embeddings, answered by a locally hosted DeepSeek model.', dur: 213 },
-        { id: 'local', title: 'Fully Local', desc: 'No API keys and no cloud. Private by design, and it runs air-gapped.', dur: 158 }
+        { id: 'hub', title: 'Knowledge Hub', desc: 'Self-hosted RAG assistant: ask your own documents questions, answered by a local DeepSeek model.', dur: 226, lyrics: [
+          'Bring your own knowledge.',
+          'Text files, JSON.',
+          'Stored in PostgreSQL with their metadata.',
+          'Ask a question in plain language.',
+          'FastAPI generates the embeddings.',
+          'Retrieval finds the relevant pieces.',
+          'A local DeepSeek model writes the answer.',
+          'Angular 19 and Material on the front.',
+          'Node.js and Express behind it, built domain-driven.',
+          'No API keys.',
+          'No cloud.',
+          'Nothing leaves the machine.',
+          'It even runs air-gapped.'
+        ] }
       ]
     },
     {
@@ -107,17 +174,64 @@ window.SITE = {
       credits: [['Role', 'Senior Software Engineer'], ['Terms', 'Contract'], ['Dates', 'Apr 2024 – present'], ['HQ', 'Athens, Greece']],
       links: [],
       tracks: [
-        { id: 'shift-dashboard', title: 'Shift Utilization Dashboard', feat: 'wayve', desc: 'Replaced Grafana. 216 tests, and it reconciles to within about a point where the old numbers drifted 3 to 9 points apart.', dur: 236, popular: 3 },
-        { id: 'shift-clock', title: 'Shift Utilisation Clock', feat: 'wayve', desc: 'A kiosk view of shift utilisation for the floor.', dur: 172 },
-        { id: 'gap-review', title: 'Gap Review', feat: 'wayve', desc: 'A workflow for reviewing and explaining gaps in utilisation.', dur: 181 },
-        { id: 'annotation', title: 'Annotation Platform', feat: 'wayve', desc: 'The platform the annotation work runs on.', dur: 224 },
-        { id: 'allocation', title: 'Allocation Engine', feat: 'wayve', desc: 'A list-based engine for allocating work.', dur: 198 },
-        { id: 'etl', title: 'Annotations Reporting ETL', feat: 'wayve', desc: 'Moves annotation data from Lakebase into Delta for reporting. I introduced Lakebase to the team.', dur: 211 },
-        { id: 'sci', title: 'Safety-Critical Interventions', feat: 'wayve', desc: 'A dashboard for safety-critical interventions.', dur: 203 },
-        { id: 'hubrural', title: 'Compliance & CRM Platform', feat: 'hubrural', desc: 'Retool and Postgres platform for Hub Rural, a UK land agency: AML compliance, a workflow engine, DocuSign and S3.', dur: 228 },
-        { id: 'retail', title: 'Retail Data Platform', desc: 'Data platform for a global spirits group.', dur: 195 },
-        { id: 'healthcare', title: 'Healthcare Platform', desc: 'A platform for a healthcare client.', dur: 187 },
-        { id: 'entertainment', title: 'Entertainment & Data Platform', desc: 'Cut load times by about half and moved auth to Cognito.', dur: 201 }
+        { id: 'shift-dashboard', title: 'Shift Utilization Dashboard', feat: 'wayve', desc: 'Replaced Grafana. 216 tests, and it reconciles to within about a point where the old numbers drifted 3 to 9 points apart.', dur: 236, lyrics: [
+          'Shift utilization for Wayve\'s fleet.',
+          'It replaced Grafana.',
+          'The old numbers drifted three to nine points apart.',
+          'Now they reconcile to within about a point.',
+          '216 tests behind it.'
+        ], popular: 3 },
+        { id: 'shift-clock', title: 'Shift Utilisation Clock', feat: 'wayve', desc: 'A kiosk view of shift utilisation for the floor.', dur: 172, lyrics: [
+          'Shift utilisation,',
+          'on a kiosk.',
+          'One of 5+ apps in the Fleet Systems & Insights portfolio,',
+          'used across the UK, US, Germany and Japan.'
+        ] },
+        { id: 'gap-review', title: 'Gap Review', feat: 'wayve', desc: 'A workflow for reviewing and explaining gaps in utilisation.', dur: 181, lyrics: [
+          'A workflow for reviewing utilisation gaps.',
+          'Find the gap.',
+          'Explain it.'
+        ] },
+        { id: 'annotation', title: 'Annotation Platform', feat: 'wayve', desc: 'The platform the annotation work runs on.', dur: 224, lyrics: [
+          'The platform',
+          'Wayve\'s annotation work runs on.'
+        ] },
+        { id: 'allocation', title: 'Allocation Engine', feat: 'wayve', desc: 'A list-based engine for allocating work.', dur: 198, lyrics: [
+          'A list-based engine',
+          'for allocating the work.'
+        ] },
+        { id: 'etl', title: 'Annotations Reporting ETL', feat: 'wayve', desc: 'Moves annotation data from Lakebase into Delta for reporting. I introduced Lakebase to the team.', dur: 211, lyrics: [
+          'Annotation data,',
+          'from Lakebase into Delta.',
+          'Reporting built on top.',
+          'I introduced Lakebase to the team.'
+        ] },
+        { id: 'sci', title: 'Safety-Critical Interventions', feat: 'wayve', desc: 'A dashboard for safety-critical interventions.', dur: 203, lyrics: [
+          'Safety-critical interventions,',
+          'on one dashboard.'
+        ] },
+        { id: 'hubrural', title: 'Compliance & CRM Platform', feat: 'hubrural', desc: 'Retool and Postgres platform for Hub Rural, a UK land agency: AML compliance, a workflow engine, DocuSign and S3.', dur: 228, lyrics: [
+          'A compliance and CRM platform',
+          'for Hub Rural, a UK land agency.',
+          'Retool on Postgres.',
+          'AML compliance checks.',
+          'A workflow engine.',
+          'DocuSign for signatures.',
+          'S3 for the documents.'
+        ] },
+        { id: 'retail', title: 'Retail Data Platform', desc: 'Data platform for a global spirits group.', dur: 195, lyrics: [
+          'A data platform',
+          'for a global spirits group.'
+        ] },
+        { id: 'healthcare', title: 'Healthcare Platform', desc: 'A platform for a healthcare client.', dur: 187, lyrics: [
+          'A platform',
+          'for a healthcare client.'
+        ] },
+        { id: 'entertainment', title: 'Entertainment & Data Platform', desc: 'Cut load times by about half and moved auth to Cognito.', dur: 201, lyrics: [
+          'An entertainment and data platform.',
+          'Load times cut by about half.',
+          'Sign-in moved to Amazon Cognito.'
+        ] }
       ]
     },
     {
@@ -128,9 +242,21 @@ window.SITE = {
       credits: [['Role', 'Software Engineer'], ['Dates', 'Sep 2022 – Mar 2024'], ['Location', 'Remote'], ['Came before', 'Stackdrop']],
       links: [],
       tracks: [
-        { id: 'features', title: 'End to End', desc: 'Features from the MySQL schema through Node.js APIs to Angular.', dur: 214 },
-        { id: 'big-deal', title: 'The Big Deal', desc: 'Engineering work supporting one of the largest client deals.', dur: 197 },
-        { id: 'tooling', title: 'Seeders, Biome and Husky', desc: 'Database seeders plus Biome and Husky for a cleaner, faster dev loop.', dur: 168 }
+        { id: 'features', title: 'End to End', desc: 'Features from the MySQL schema through Node.js APIs to Angular.', dur: 214, lyrics: [
+          'Features, end to end.',
+          'The MySQL schema.',
+          'The Node.js APIs.',
+          'The Angular front end.'
+        ] },
+        { id: 'big-deal', title: 'The Big Deal', desc: 'Engineering work supporting one of the largest client deals.', dur: 197, lyrics: [
+          'The engineering behind',
+          'one of the largest client deals.'
+        ] },
+        { id: 'tooling', title: 'Seeders, Biome and Husky', desc: 'Database seeders plus Biome and Husky for a cleaner, faster dev loop.', dur: 168, lyrics: [
+          'Database seeders.',
+          'Biome and Husky,',
+          'so the checks run before every commit.'
+        ] }
       ]
     }
   ]
