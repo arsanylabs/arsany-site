@@ -29,7 +29,7 @@
 window.SITE = {
   companies: {
     stackdrop: { name: 'Stackdrop', website: 'https://stackdrop.co', logo: 'logos/stackdrop.png', logoTile: true, mark: 'SD' },
-    wayve: { name: 'Wayve', website: 'https://wayve.ai', logo: null, mark: 'W' }
+    wayve: { name: 'Wayve', website: 'https://wayve.ai', logo: 'logos/wayve.png', logoTile: true, mark: 'W' }
   },
 
   releases: [
