@@ -78,7 +78,7 @@ window.SITE = {
     },
     {
       id: 'marathon-navigator', kind: 'single', title: 'Marathon Navigator', year: 'Live',
-      cover: { mark: 'MN', c1: '#e2524a', c2: '#4a1414', pattern: 'stripes' },
+      cover: { mark: 'MN', logo: 'logos/marathon-navigator.svg', logoTile: true, c1: '#ffc00a', c2: '#7a4a00', pattern: 'stripes' },
       blurb: 'A live mobile app for charity youth competitions, in English and Arabic with full right-to-left support.',
       credits: [['Role', 'Builder'], ['Stack', 'React Native, Expo, Supabase'], ['Languages', 'English, Arabic (RTL)']],
       links: [],
