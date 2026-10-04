@@ -84,6 +84,18 @@ window.SITE = {
       ]
     },
     {
+      id: 'knowledge-hub', kind: 'single', title: 'Knowledge Hub',
+      cover: { mark: 'KH', c1: '#8a5cf6', c2: '#2a1a5c', pattern: 'dots' },
+      blurb: 'A self-hosted RAG knowledge assistant. Upload your own documents and ask them questions in plain language, answered by a local DeepSeek model. Nothing leaves the machine, so it works fully offline.',
+      credits: [['Role', 'Author'], ['License', 'Open source'], ['Stack', 'Angular 19, Node.js, Express, FastAPI, PostgreSQL, DeepSeek']],
+      links: [{ label: 'GitHub', href: 'https://github.com/arsanylabs/Knowledge-hub' }],
+      tracks: [
+        { id: 'upload', title: 'Upload Knowledge', desc: 'Bring your own text and JSON files as the knowledge base.', dur: 176 },
+        { id: 'ask', title: 'Ask in Plain Language', desc: 'Retrieval over local embeddings, answered by a locally hosted DeepSeek model.', dur: 213 },
+        { id: 'local', title: 'Fully Local', desc: 'No API keys and no cloud. Private by design, and it runs air-gapped.', dur: 158 }
+      ]
+    },
+    {
       id: 'ab-optimizer', kind: 'single', title: 'AB-Optimizer',
       cover: { mark: 'AB', c1: '#d9962a', c2: '#6e2f0e', pattern: 'stripes' },
       blurb: 'A conversion rate optimization SaaS I worked on with a partner.',
