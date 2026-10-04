@@ -59,7 +59,7 @@ window.SITE = {
         { id: 'marketing', title: 'Marketing', desc: 'We ran the marketing ourselves.', dur: 171 },
         { id: 'delivery', title: 'Delivery', desc: 'Shipping orders across Egypt with Bosta.', dur: 159 },
         { id: 'scale', title: '300 a Month', desc: 'Grew to 300 orders a month and broke even.', dur: 204 },
-        { id: 'exit', title: 'The Exit', desc: 'I exited the brand.', dur: 142 }
+        { id: 'exit', title: 'The Exit', desc: 'I exited to found Dentica, a product closer to what I do best.', dur: 142 }
       ]
     },
     {
