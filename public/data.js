@@ -42,7 +42,7 @@ window.SITE = {
     {
       id: 'dentica', kind: 'album', title: 'Dentica',
       cover: { mark: 'D', logo: 'logos/dentica.png', logoTile: true, c1: '#4a4044', c2: '#1f1a17', pattern: 'rings' },
-      blurb: 'Dental practice management for Egypt, for solo doctors and clinics, on web and mobile. I founded it and I am building the MVP: a 41-table data model with soft deletes and append-only history, covered by 53 test files.',
+      blurb: 'Dental practice management for Egypt, for solo doctors and clinics, on web and mobile. I founded it and I am building the MVP: a 41-table data model with soft deletes and append-only history, tested from unit level up to load.',
       credits: [['Role', 'Founder'], ['Status', 'MVP in progress'], ['Stack', 'NestJS, Prisma, Postgres (Supabase), Better Auth, Expo, TanStack Query, Turborepo'], ['Market', 'Egypt']],
       links: [],
       tracks: [
@@ -68,24 +68,33 @@ window.SITE = {
           'Who gets in, and as whom.',
           'Sign-in runs on Better Auth.'
         ] },
-        { id: 'mobile', title: 'Dentica Mobile', desc: 'The same platform on mobile, built with Expo.', dur: 196, lyrics: [
-          'The same platform, on mobile.',
-          'Built with Expo.',
-          'TanStack Query keeping the data in sync.'
-        ] },
         { id: 'monorepo', title: 'One Repo', desc: 'Web, mobile and the API in one Turborepo.', dur: 175, lyrics: [
           'Web, mobile and the API.',
           'One Turborepo holds them all.'
         ] },
-        { id: 'tests', title: '53 Test Files', desc: 'The test suite behind the MVP.', dur: 181, lyrics: [
-          '53 test files.',
-          'Keeping the MVP honest',
-          'while it is still being built.'
+        { id: 'tests', title: 'Tested at Every Layer', desc: 'Unit, API end-to-end, browser end-to-end, mobile and load tests.', dur: 221, lyrics: [
+          'Unit tests with Vitest, for the logic on its own.',
+          'API end-to-end tests that run against a real Postgres, not mocks.',
+          'They cover sign-in, roles and permissions,',
+          'patients, appointments, charting, invoices and payments.',
+          'Even two people accepting the same invitation at once.',
+          'Playwright drives the web app in a real browser:',
+          'onboarding, sessions, invoices, WhatsApp,',
+          'every language and accessibility.',
+          'Jest for the mobile screens.',
+          'And k6 load tests: baseline, stress, a full user journey,',
+          'and a breakpoint run to find where it falls over,',
+          'watched live in Grafana.'
         ] },
-        { id: 'lite', title: 'Dentica Lite', desc: 'A lighter companion app made only for doctors.', dur: 187, lyrics: [
-          'Dentica Lite.',
-          'A lighter companion app,',
-          'made only for doctors.'
+        { id: 'lite', title: 'Dentica Lite', desc: 'The mobile app: same platform, access shaped by permissions.', dur: 196, lyrics: [
+          'Dentica Lite is the mobile app.',
+          'Built with Expo, on iOS and Android.',
+          'Same platform, same API, different access.',
+          'It covers the day in the chair and at the front desk:',
+          'the schedule, patients, charting, invoices and payments.',
+          'What each person can do follows their permissions,',
+          'never their job title.',
+          'The heavy admin stays on the web.'
         ], popular: 5 }
       ]
     },
