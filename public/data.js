@@ -30,7 +30,7 @@ window.SITE = {
   companies: {
     stackdrop: { name: 'Stackdrop', website: 'https://stackdrop.co', logo: 'logos/stackdrop.png', logoTile: true, mark: 'SD' },
     hubrural: { name: 'Hub Rural', website: 'https://www.hubrural.co.uk', logo: null, mark: 'HR' },
-    spare: { name: 'Spare', website: null, logo: 'logos/spare.png', logoTile: true, mark: 'S' },
+    spare: { name: 'Spare', website: 'https://www.paywithspare.com', logo: 'logos/spare.png', logoTile: true, mark: 'S' },
     wayve: { name: 'Wayve', website: 'https://wayve.ai', logo: 'logos/wayve.png', logoTile: true, mark: 'W' }
   },
 
