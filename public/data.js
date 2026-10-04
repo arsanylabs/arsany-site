@@ -50,13 +50,15 @@ window.SITE = {
     {
       id: 'viorette', kind: 'ep', title: 'Viorette',
       cover: { mark: 'V', c1: '#a9a2bd', c2: '#3f3a55', pattern: 'dots' },
-      blurb: 'Sterling silver jewelry for women in Egypt and the MENA region. I ran the store, the marketing and the tech, then exited.',
-      credits: [['Role', 'Ran it, then exited'], ['Category', 'E-commerce brand'], ['Market', 'Egypt and MENA']],
+      blurb: 'Sterling silver jewelry for women in Egypt and the MENA region. A year-long side hustle with my cofounder: we did everything together, from the store and the designs to marketing and shipping, and grew it to 300 orders a month at break-even before I exited.',
+      credits: [['Role', 'Cofounder'], ['Run', 'One year, as a side hustle'], ['Peak', '300 orders a month, break-even'], ['Stack', 'WooCommerce, then Shopify, with Bosta for delivery'], ['Market', 'Egypt and MENA']],
       links: [],
       tracks: [
-        { id: 'store', title: 'The Store', desc: 'Sterling silver jewelry for women in Egypt and the MENA region.', dur: 198, popular: 4 },
-        { id: 'marketing', title: 'Marketing', desc: 'I ran the marketing myself.', dur: 171 },
-        { id: 'tech', title: 'The Tech', desc: 'I built and ran the tech behind the store.', dur: 183 },
+        { id: 'store', title: 'The Store', desc: 'Started on WooCommerce, then moved to Shopify.', dur: 198, popular: 4 },
+        { id: 'designs', title: 'Designs', desc: 'The jewelry designs and the brand look, worked out together.', dur: 186 },
+        { id: 'marketing', title: 'Marketing', desc: 'We ran the marketing ourselves.', dur: 171 },
+        { id: 'delivery', title: 'Delivery', desc: 'Shipping orders across Egypt with Bosta.', dur: 159 },
+        { id: 'scale', title: '300 a Month', desc: 'Grew to 300 orders a month and broke even.', dur: 204 },
         { id: 'exit', title: 'The Exit', desc: 'I exited the brand.', dur: 142 }
       ]
     },
