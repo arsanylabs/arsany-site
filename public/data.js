@@ -8,7 +8,8 @@
      label     optional id of a collab the release came out of ("℗ Stackdrop")
      year      optional, shown in the release header
      cover     generated cover art: mark (1-2 letters), two colors, pattern
-               (rings | dots | grid | stripes | split)
+               (rings | dots | grid | stripes | split), and an optional logo
+               (square app icon under public/logos/) shown instead of the mark
      credits   [label, value] pairs shown under the tracklist
      links     [{ label, href }] buttons in the release header
 
@@ -37,7 +38,7 @@ window.SITE = {
   releases: [
     {
       id: 'dentica', kind: 'album', title: 'Dentica',
-      cover: { mark: 'D', c1: '#19b06a', c2: '#0a4a33', pattern: 'rings' },
+      cover: { mark: 'D', logo: 'logos/dentica.png', c1: '#6b2d5c', c2: '#1f1a17', pattern: 'rings' },
       blurb: 'Dental practice management for Egypt, for solo doctors and clinics, on web and mobile. I founded it and I am building the MVP: a 41-table data model with soft deletes and append-only history, covered by 53 test files.',
       credits: [['Role', 'Founder'], ['Status', 'MVP in progress'], ['Stack', 'NestJS, Prisma, Postgres (Supabase), Better Auth, Expo, TanStack Query, Turborepo'], ['Market', 'Egypt']],
       links: [],
