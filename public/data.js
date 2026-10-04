@@ -238,54 +238,127 @@ window.SITE = {
       id: 'stackdrop', kind: 'collab', with: 'stackdrop', title: 'Stackdrop', current: true,
       cover: { mark: 'SD', c1: '#f5a512', c2: '#5c3a06', pattern: 'split' },
       year: 'Apr 2024 – now',
-      blurb: 'Remote-first software house headquartered in Athens. I work as a contractor across several client projects at once. The headline engagement is Wayve, where I am the Retool engineer and product owner for the Fleet Systems & Insights portfolio: 5+ apps used across the UK, US, Germany and Japan.',
+      blurb: 'Remote-first software house headquartered in Athens. I work as a contractor across several client projects at once. The headline engagement is Wayve, where I am embedded with Fleet Operations as Retool engineer and product owner for the Fleet Systems & Insights portfolio, used across the UK, US, Germany and Japan. Alongside it, I build Hub Rural\'s compliance and CRM platform.',
       credits: [['Role', 'Senior Software Engineer'], ['Terms', 'Contract'], ['Dates', 'Apr 2024 – present'], ['HQ', 'Athens, Greece']],
       links: [],
       tracks: [
-        { id: 'shift-dashboard', title: 'Shift Utilization Dashboard', feat: 'wayve', desc: 'Replaced Grafana. 216 tests, and it reconciles to within about a point where the old numbers drifted 3 to 9 points apart.', dur: 236, lyrics: [
-          'Shift utilization for Wayve\'s fleet.',
-          'It replaced Grafana.',
+        { id: 'product-owner', title: 'Product Owner', feat: 'wayve', desc: 'Embedded with Fleet Operations: from the problem to the rollout to running it live.', dur: 219, lyrics: [
+          'Not just tickets in, code out.',
+          'Embedded with Wayve\'s Fleet Operations as product owner and builder.',
+          'Understand the problem and the people who have it.',
+          'Ask about the data, the owners, the permissions and the edge cases',
+          'before they turn into production problems.',
+          'Wireframes and prototypes to get everyone aligned.',
+          'Build it, then launch it, train people on it, and support it live.',
+          'Across Fleet Ops, Safety, QA, People Ops and regional leadership,',
+          'in four countries and their time zones.'
+        ] },
+        { id: 'shift-dashboard', title: 'Shift Utilization Dashboard', feat: 'wayve', desc: 'The primary tool for shift monitoring, gap review and reporting in every Wayve geography.', dur: 236, lyrics: [
+          'Shift monitoring used to live in Grafana, Slack, spreadsheets',
+          'and vehicle-level views.',
+          'Now it lives in one place.',
+          'I designed it, validated it with the shift leads, and built it.',
           'The old numbers drifted three to nine points apart.',
           'Now they reconcile to within about a point.',
-          '216 tests behind it.'
+          'Gaps classified live.',
+          'Vehicle detail. VSO tracking. Your region picked for you.',
+          'Error monitoring that pings Slack before users do.',
+          '216 tests behind it.',
+          'Rolled out on a fixed date in Japan, Germany, the UK and the US.',
+          'The primary tool in every geography.'
         ], popular: 3 },
-        { id: 'shift-clock', title: 'Shift Utilisation Clock', feat: 'wayve', desc: 'A kiosk view of shift utilisation for the floor.', dur: 172, lyrics: [
-          'Shift utilisation,',
-          'on a kiosk.',
-          'One of 5+ apps in the Fleet Systems & Insights portfolio,',
-          'used across the UK, US, Germany and Japan.'
-        ] },
-        { id: 'gap-review', title: 'Gap Review', feat: 'wayve', desc: 'A workflow for reviewing and explaining gaps in utilisation.', dur: 181, lyrics: [
-          'A workflow for reviewing utilisation gaps.',
+        { id: 'gap-review', title: 'Gap Review', feat: 'wayve', desc: 'The timeline and gap-review experience at the heart of shift utilisation.', dur: 181, lyrics: [
+          'A timeline of every shift.',
           'Find the gap.',
-          'Explain it.'
+          'Classify it.',
+          'Explain it.',
+          'Designed with the shift leads who use it every day.'
         ] },
-        { id: 'annotation', title: 'Annotation Platform', feat: 'wayve', desc: 'The platform the annotation work runs on.', dur: 224, lyrics: [
-          'The platform',
-          'Wayve\'s annotation work runs on.'
+        { id: 'shift-clock', title: 'Shift Utilisation Clock', feat: 'wayve', desc: 'An automatic shift clock with live utilisation for the current shift.', dur: 172, lyrics: [
+          'A clock that knows which shift it is.',
+          'Utilisation for the shift that is running right now.',
+          'Switch region and it loads that region, never stale numbers.',
+          'Built to an approved Wayve design.'
         ] },
-        { id: 'allocation', title: 'Allocation Engine', feat: 'wayve', desc: 'A list-based engine for allocating work.', dur: 198, lyrics: [
-          'A list-based engine',
-          'for allocating the work.'
+        { id: 'ops-analytics', title: 'Ops Analytics', feat: 'wayve', desc: 'Utilisation for regional leadership, on one shared definition.', dur: 188, lyrics: [
+          'Regional leadership wanted the bigger picture.',
+          'The same utilisation, rolled up for them.',
+          'One definition of utilisation for everyone,',
+          'and clear lines on who sees what.'
         ] },
-        { id: 'etl', title: 'Annotations Reporting ETL', feat: 'wayve', desc: 'Moves annotation data from Lakebase into Delta for reporting. I introduced Lakebase to the team.', dur: 211, lyrics: [
-          'Annotation data,',
-          'from Lakebase into Delta.',
-          'Reporting built on top.',
+        { id: 'annotations-manager', title: 'Annotations Manager', feat: 'wayve', desc: 'Bulk assignment, reassignment and status tracking for annotation managers.', dur: 224, lyrics: [
+          'Annotation work used to be assigned in spreadsheets.',
+          'Now managers do it in one app.',
+          'Assign in bulk. Reassign. Track the status.',
+          'Data syncs on its own.',
+          'I took it to production, set up the users,',
+          'and became the first point of contact for it.'
+        ] },
+        { id: 'allocation', title: 'Annotations Queue', feat: 'wayve', desc: 'A focused queue for annotators, prioritised so work cannot be cherry-picked.', dur: 198, lyrics: [
+          'A focused queue for each annotator.',
+          'Work arrives in priority order,',
+          'so nobody cherry-picks the easy ones.',
+          'Comments on every disengagement.',
+          'At local midnight in each geography, the day is swept and flushed.',
+          'US, UK, Japan, Germany.'
+        ] },
+        { id: 'etl', title: 'Annotations Reporting', feat: 'wayve', desc: 'Annotation data from Lakebase into Delta, with QA and reporting on top. I introduced Lakebase to the team.', dur: 211, lyrics: [
+          'Not stopping at the first version.',
+          'Annotation data moves from Lakebase into Delta.',
+          'Reporting and QA built on top.',
           'I introduced Lakebase to the team.'
         ] },
-        { id: 'sci', title: 'Safety-Critical Interventions', feat: 'wayve', desc: 'A dashboard for safety-critical interventions.', dur: 203, lyrics: [
-          'Safety-critical interventions,',
-          'on one dashboard.'
+        { id: 'sci', title: 'Safety-Critical Interventions', feat: 'wayve', desc: 'Connects the topline safety numbers to each intervention log and its video.', dur: 203, lyrics: [
+          'Safety numbers at the top.',
+          'Click one, and you are in the individual intervention log.',
+          'Click again, and you are watching the video.',
+          'By vehicle. By time bucket. Exportable.',
+          'Shipped soon after I joined.'
+        ] },
+        { id: 'hibob-connecteam', title: 'Time Off, in Sync', feat: 'wayve', desc: 'HiBob and Connecteam time-off sync, so nobody enters leave twice.', dur: 207, lyrics: [
+          'Leave was entered twice:',
+          'once in HiBob, once in Connecteam.',
+          'Now it syncs, from HiBob to Connecteam and back.',
+          'Duplicate checks. Full-time and contractor filtering.',
+          'Policies mapped country by country.',
+          'Private details stay private.',
+          'Validated in stages before it went live.'
         ] },
         { id: 'hubrural', title: 'Compliance & CRM Platform', feat: 'hubrural', desc: 'Retool and Postgres platform for Hub Rural, a UK land agency: AML compliance, a workflow engine, DocuSign and S3.', dur: 228, lyrics: [
           'A compliance and CRM platform',
           'for Hub Rural, a UK land agency.',
           'Retool on Postgres.',
           'AML compliance checks.',
-          'A workflow engine.',
-          'DocuSign for signatures.',
+          'A workflow engine for jobs and actions.',
           'S3 for the documents.'
+        ] },
+        { id: 'hub-docusign', title: 'Signed, Sent, Tracked', feat: 'hubrural', desc: 'DocuSign agreements sent from the platform, with signer status flowing back.', dur: 192, lyrics: [
+          'Agreements go out through DocuSign.',
+          'Signer status comes back on its own.',
+          'When the wrong agreement was going out,',
+          'I traced it to the root and fixed it,',
+          'so every envelope and every status lands on the right agreement.'
+        ] },
+        { id: 'hub-recurrence', title: 'Recurrence Engine', feat: 'hubrural', desc: 'A nightly engine that creates recurring actions, safely.', dur: 214, lyrics: [
+          'Every night at one, it runs.',
+          'It creates the next occurrence of every recurring action.',
+          'Two runs can never create the same one twice.',
+          'If an insert fails, nothing moves; it tries again tomorrow.',
+          'A series that started on the 31st comes back to the 31st.',
+          'Every two weeks on Tuesday means every two weeks on Tuesday.'
+        ] },
+        { id: 'hub-reports', title: 'Monday Morning', feat: 'hubrural', desc: 'Weekly actions, jobs and compliance reports, emailed every Monday at 8.', dur: 176, lyrics: [
+          'Monday, eight in the morning.',
+          'Every employee gets their actions and their jobs for the week.',
+          'The compliance team gets the compliance report.',
+          'One query for everyone, then one email each,',
+          'in the house style, light mode and dark.'
+        ] },
+        { id: 'hub-mobile', title: 'Hub Mobile', feat: 'hubrural', desc: 'The platform in the field: jobs, tasks and actions on mobile.', dur: 169, lyrics: [
+          'The platform, in the field.',
+          'All jobs, job details,',
+          'tasks and actions,',
+          'from a phone.'
         ] },
         { id: 'retail', title: 'Retail Data Platform', desc: 'Data platform for a global spirits group.', dur: 195, lyrics: [
           'A data platform',
