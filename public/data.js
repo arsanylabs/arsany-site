@@ -3,7 +3,7 @@
    Release fields
      id        URL slug, e.g. arsany.dev/#dentica
      kind      'album' | 'ep' | 'single' (solo work) or 'collab' (a company)
-     with      collabs only: the company name
+     with      collabs only: id of the company in `companies`
      current   collabs only: true while you're still working there
      label     optional id of a collab the release came out of ("℗ Stackdrop")
      year      optional, shown in the release header
@@ -14,11 +14,22 @@
 
    Track fields
      id        unique within the release
-     feat      optional featured artist, e.g. a client: "feat. Wayve"
+     feat      optional id of a company in `companies`, shown as "feat. Wayve"
      popular   optional rank (1 = top) to list it under Popular on the home page
-     dur       track length in seconds (it's a music player, after all) */
+     dur       track length in seconds (it's a music player, after all)
+
+   Company fields
+     name      display name
+     website   full URL, shown as a "Visit" button (null hides it)
+     logo      path under public/, e.g. 'logos/wayve.svg' (null falls back to `mark`)
+     mark      1-2 letters used on the cover when there's no logo */
 
 window.SITE = {
+  companies: {
+    stackdrop: { name: 'Stackdrop', website: null, logo: null, mark: 'SD' },
+    wayve: { name: 'Wayve', website: 'https://wayve.ai', logo: null, mark: 'W' }
+  },
+
   releases: [
     {
       id: 'dentica', kind: 'album', title: 'Dentica',
@@ -66,14 +77,14 @@ window.SITE = {
       ]
     },
     {
-      id: 'stackdrop', kind: 'collab', with: 'Stackdrop', title: 'Stackdrop', current: true,
+      id: 'stackdrop', kind: 'collab', with: 'stackdrop', title: 'Stackdrop', current: true,
       cover: { mark: 'SD', c1: '#0f7a50', c2: '#0a3a52', pattern: 'split' },
       blurb: 'Remote-first software house headquartered in Athens, with most of the engineers in Egypt. I work as an independent contractor across several client projects at once, including an embedded engagement with Wayve.',
       credits: [['Role', 'Senior Fullstack Engineer'], ['Terms', 'Independent contractor'], ['HQ', 'Athens, Greece']],
       links: [],
       tracks: [
-        { id: 'wayve-eng', title: 'Embedded Engineering', feat: 'Wayve', desc: 'Embedded in the team at Wayve, an autonomous driving AI company.', dur: 223 },
-        { id: 'wayve-po', title: 'Product Owner', feat: 'Wayve', desc: 'Covering the product owner role on the Wayve engagement, alongside the engineering.', dur: 205, popular: 3 },
+        { id: 'wayve-eng', title: 'Embedded Engineering', feat: 'wayve', desc: 'Embedded in the team at Wayve, an autonomous driving AI company.', dur: 223 },
+        { id: 'wayve-po', title: 'Product Owner', feat: 'wayve', desc: 'Covering the product owner role on the Wayve engagement, alongside the engineering.', dur: 205, popular: 3 },
         { id: 'builds', title: 'Client Builds', desc: 'Building across several client projects at once.', dur: 232 },
         { id: 'calls', title: 'Client Calls', desc: 'Talking to clients directly about scope and what they need next.', dur: 164 },
         { id: 'demos', title: 'Demos', desc: 'Demoing the work back to clients.', dur: 151 },

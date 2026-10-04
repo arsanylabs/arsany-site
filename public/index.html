@@ -262,6 +262,15 @@ section.block > h2 { margin-bottom: 16px; }
 .t-title .feat { color: var(--muted); font-weight: 500; }
 .track.current .t-title .feat { color: inherit; }
 
+.logo-mark { max-height: 22cqi; max-width: 46cqi; filter: brightness(0) invert(1); }
+.guests { display: flex; flex-wrap: wrap; gap: 12px; }
+.guest { display: flex; align-items: center; gap: 14px; padding: 10px 20px 10px 10px; border-radius: 999px; background: var(--panel-2); text-decoration: none; }
+a.guest:hover { background: var(--raise); }
+.guest-logo { width: 48px; height: 48px; border-radius: 50%; background: #fff; color: #111; display: grid; place-items: center; font-weight: 900; overflow: hidden; flex: none; }
+.guest-logo img { max-width: 70%; max-height: 70%; }
+.guest strong { display: block; }
+.guest .sub { display: block; font-size: 0.8rem; color: var(--muted); }
+
 /* About + stack */
 .about { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; }
 .about p { margin: 0 0 14px; max-width: 62ch; }
@@ -487,6 +496,8 @@ section.block > h2 { margin-bottom: 16px; }
 (function () {
   /* Content lives in data.js. Popular is built from each track's `popular` rank. */
   var RELEASES = window.SITE.releases;
+  var COMPANIES = window.SITE.companies || {};
+  function co(id) { return COMPANIES[id] || { name: id, mark: String(id).slice(0, 2).toUpperCase() }; }
   var POPULAR = [];
   RELEASES.forEach(function (r) {
     r.tracks.forEach(function (tr, i) { if (tr.popular) POPULAR.push({ rank: tr.popular, key: r.id + ':' + i }); });
@@ -505,11 +516,11 @@ section.block > h2 { margin-bottom: 16px; }
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function fmt(s) { s = Math.floor(s); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
-  function artists(r) { return r.with ? 'Arsany × ' + r.with : 'Arsany'; }
+  function artists(r) { return r.with ? 'Arsany × ' + co(r.with).name : 'Arsany'; }
   function songs(r) { var n = r.tracks.length; return n + (n === 1 ? ' song' : ' songs'); }
   function kindLine(r) { return KIND[r.kind] + ' · ' + (r.with ? artists(r) : songs(r)); }
-  function trackName(tr) { return tr.title + (tr.feat ? ' (feat. ' + tr.feat + ')' : ''); }
-  function trackHTML(tr) { return esc(tr.title) + (tr.feat ? ' <span class="feat">feat. ' + esc(tr.feat) + '</span>' : ''); }
+  function trackName(tr) { return tr.title + (tr.feat ? ' (feat. ' + co(tr.feat).name + ')' : ''); }
+  function trackHTML(tr) { return esc(tr.title) + (tr.feat ? ' <span class="feat">feat. ' + esc(co(tr.feat).name) + '</span>' : ''); }
   function featuring(r) {
     var seen = [];
     r.tracks.forEach(function (tr) { if (tr.feat && seen.indexOf(tr.feat) < 0) seen.push(tr.feat); });
@@ -524,8 +535,11 @@ section.block > h2 { margin-bottom: 16px; }
 
   function cover(r, cls) {
     var c = r.cover;
-    var marks = r.with
-      ? '<span>A</span><span class="x">×</span><span>' + esc(c.mark) + '</span>'
+    var partner = r.with && co(r.with);
+    var marks = partner
+      ? '<span>A</span><span class="x">×</span>' + (partner.logo
+          ? '<img class="logo-mark" src="' + esc(partner.logo) + '" alt="">'
+          : '<span>' + esc(partner.mark || c.mark) + '</span>')
       : '<span>' + esc(c.mark) + '</span>';
     return '<div class="art pat-' + c.pattern + (r.with ? ' is-collab' : '') + (cls ? ' ' + cls : '') +
       '" style="--c1:' + c.c1 + ';--c2:' + c.c2 + '" aria-hidden="true"><div class="marks">' + marks + '</div></div>';
@@ -535,7 +549,7 @@ section.block > h2 { margin-bottom: 16px; }
     return '<a class="feature" href="#' + r.id + '"><div class="feature-art">' + cover(r) + '</div><div class="feature-text">' +
       '<div class="eyebrow">' + KIND[r.kind] + (r.current ? ' <span class="now-tag">Now</span>' : '') + '</div>' +
       '<h3>' + esc(artists(r)) + '</h3><p>' + esc(r.blurb) + '</p>' +
-      '<p class="sub">' + songs(r) + (feat.length ? ' · featuring ' + esc(feat.join(', ')) : '') + '</p></div></a>';
+      '<p class="sub">' + songs(r) + (feat.length ? ' · featuring ' + esc(feat.map(function (id) { return co(id).name; }).join(', ')) : '') + '</p></div></a>';
   }
   function card(r) {
     return '<a class="album" href="#' + r.id + '">' + cover(r) +
@@ -587,6 +601,9 @@ section.block > h2 { margin-bottom: 16px; }
     var links = (r.links || []).map(function (l) {
       return '<a class="pill" href="' + esc(l.href) + '" target="_blank" rel="noopener">' + esc(l.label) + '</a>';
     }).join('');
+    var partner = r.with && co(r.with);
+    if (partner && partner.website) links = '<a class="pill" href="' + esc(partner.website) + '" target="_blank" rel="noopener">Visit ' + esc(partner.name) + '</a>' + links;
+    var feats = featuring(r);
     var label = r.label && byId[r.label];
     var onLabel = RELEASES.filter(function (o) { return o.label === r.id; });
     var more = RELEASES.filter(function (o) { return o.id !== r.id && onLabel.indexOf(o) < 0; }).slice(0, 5);
@@ -608,6 +625,12 @@ section.block > h2 { margin-bottom: 16px; }
       '<section class="block"><h2>Credits</h2><dl class="facts credits">' +
         r.credits.map(function (c) { return '<div><dt>' + esc(c[0]) + '</dt><dd>' + esc(c[1]) + '</dd></div>'; }).join('') +
       '</dl></section>' +
+      (feats.length ? '<section class="block"><h2>Featuring</h2><div class="guests">' + feats.map(function (id) {
+        var c = co(id);
+        var inner = '<span class="guest-logo">' + (c.logo ? '<img src="' + esc(c.logo) + '" alt="">' : esc(c.mark)) + '</span>' +
+          '<span><strong>' + esc(c.name) + '</strong>' + (c.website ? '<span class="sub">' + esc(c.website.replace(/^https?:\/\//, '')) + '</span>' : '') + '</span>';
+        return c.website ? '<a class="guest" href="' + esc(c.website) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<div class="guest">' + inner + '</div>';
+      }).join('') + '</div></section>' : '') +
       (onLabel.length ? '<section class="block"><h2>Released on ' + esc(r.title) + '</h2><div class="albums">' + onLabel.map(card).join('') + '</div></section>' : '') +
       '<section class="block" style="padding-bottom:32px"><h2>More by Arsany</h2><div class="albums">' + more.map(card).join('') + '</div></section>';
   }
