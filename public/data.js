@@ -360,18 +360,46 @@ window.SITE = {
           'tasks and actions,',
           'from a phone.'
         ] },
-        { id: 'retail', title: 'Retail Data Platform', desc: 'Data platform for a global spirits group.', dur: 195, lyrics: [
-          'A data platform',
-          'for a global spirits group.'
+        { id: 'retail', title: 'Clienteling Platform', desc: 'A clienteling and retail data platform for a global spirits group: an admin web app and a mobile app for store staff.', dur: 195, lyrics: [
+          'A clienteling and retail data platform',
+          'for a global spirits group.',
+          'An admin web app, and a mobile app for the people on the shop floor.',
+          'Retool and Retool Workflows, on Azure SQL Server.',
+          'Customers, orders and products from every market\'s Magento store.',
+          'I took it over from another engineer,',
+          'with very little documentation.'
         ] },
-        { id: 'healthcare', title: 'Healthcare Platform', desc: 'A platform for a healthcare client.', dur: 187, lyrics: [
-          'A platform',
-          'for a healthcare client.'
+        { id: 'retail-ingestion', title: 'Ingestion, Rebuilt', desc: 'Rebuilt the ingestion from bulk reloads to incremental, idempotent, per-market runs.', dur: 226, lyrics: [
+          'The first version reloaded everything, every time.',
+          'I rebuilt it to be incremental.',
+          'Each run picks up from the last good one, with a day of overlap on purpose,',
+          'one market at a time.',
+          'Every row gets an ID derived from what it is,',
+          'so loading the same data twice never duplicates it.',
+          'Retries back off, with jitter.'
         ] },
-        { id: 'entertainment', title: 'Entertainment & Data Platform', desc: 'Cut load times by about half and moved auth to Cognito.', dur: 201, lyrics: [
+        { id: 'retail-memory', title: 'Under the Ceiling', desc: 'Kept large order syncs inside Retool\'s memory limit.', dur: 183, lyrics: [
+          'The data kept growing.',
+          'Retool\'s memory did not.',
+          'Orders stream through in batches of a hundred.',
+          'Half the concurrency, split by market.',
+          'And it stays under the ceiling.'
+        ] },
+        { id: 'healthcare', title: 'Clinic Platform', desc: 'A clinic management platform on a layered Postgres data model with hierarchical access.', dur: 187, lyrics: [
+          'A clinic management platform for a healthcare client.',
+          'A layered Postgres data model:',
+          'clinics, staff, patients, appointments, billing and consent.',
+          'Hierarchical access control, so each level sees what it should.',
+          'Web and mobile apps, tablet-friendly,',
+          'for running the clinic in real time and capturing patient records.'
+        ] },
+        { id: 'entertainment', title: 'Entertainment & Data Platform', desc: 'A FlutterFlow app on the App Store, faster SQL, and sign-in moved to Cognito.', dur: 201, lyrics: [
           'An entertainment and data platform.',
-          'Load times cut by about half.',
-          'Sign-in moved to Amazon Cognito.'
+          'A mobile dashboard built in FlutterFlow,',
+          'published on the App Store.',
+          'SQL tuned and indexed:',
+          'load times cut by about half.',
+          'Legacy sign-in moved to Amazon Cognito.'
         ] }
       ]
     },
