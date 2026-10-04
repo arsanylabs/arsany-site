@@ -98,16 +98,6 @@ window.SITE = {
       ]
     },
     {
-      id: 'ab-optimizer', kind: 'single', title: 'AB-Optimizer',
-      cover: { mark: 'AB', c1: '#d9962a', c2: '#6e2f0e', pattern: 'stripes' },
-      blurb: 'A conversion rate optimization SaaS I worked on with a partner.',
-      credits: [['Role', 'Co-builder'], ['Category', 'Conversion optimization SaaS']],
-      links: [],
-      tracks: [
-        { id: 'ab', title: 'AB-Optimizer', desc: 'A conversion rate optimization SaaS, built with a partner.', dur: 176 }
-      ]
-    },
-    {
       id: 'stackdrop', kind: 'collab', with: 'stackdrop', title: 'Stackdrop', current: true,
       cover: { mark: 'SD', c1: '#f5a512', c2: '#5c3a06', pattern: 'split' },
       year: 'Apr 2024 – now',
