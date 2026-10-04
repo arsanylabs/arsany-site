@@ -250,7 +250,7 @@ window.SITE = {
           'before they turn into production problems.',
           'Wireframes and prototypes to get everyone aligned.',
           'Build it, then launch it, train people on it, and support it live.',
-          'Across Fleet Ops, Safety, QA, People Ops and regional leadership,',
+          'Across Fleet Ops, Safety, QA and regional leadership,',
           'in four countries and their time zones.'
         ] },
         { id: 'shift-dashboard', title: 'Shift Utilization Dashboard', feat: 'wayve', desc: 'The primary tool for shift monitoring, gap review and reporting in every Wayve geography.', dur: 236, lyrics: [
@@ -270,12 +270,6 @@ window.SITE = {
           'Then extended for regional leadership with Ops Analytics:',
           'the same single definition of utilisation, with clear lines on who sees what.'
         ], popular: 3 },
-        { id: 'shift-clock', title: 'Shift Utilisation Clock', feat: 'wayve', desc: 'An automatic shift clock with live utilisation for the current shift.', dur: 172, lyrics: [
-          'A clock that knows which shift it is.',
-          'Utilisation for the shift that is running right now.',
-          'Switch region and it loads that region, never stale numbers.',
-          'Built to an approved Wayve design.'
-        ] },
         { id: 'annotations-manager', title: 'Annotations Manager', feat: 'wayve', desc: 'Bulk assignment, reassignment and status tracking for annotation managers.', dur: 224, lyrics: [
           'Annotation work used to be assigned in spreadsheets.',
           'Now managers do it in one app.',
@@ -304,15 +298,6 @@ window.SITE = {
           'Click again, and you are watching the video.',
           'By vehicle. By time bucket. Exportable.',
           'Shipped soon after I joined.'
-        ] },
-        { id: 'hibob-connecteam', title: 'Time Off, in Sync', feat: 'wayve', desc: 'HiBob and Connecteam time-off sync, so nobody enters leave twice.', dur: 207, lyrics: [
-          'Leave was entered twice:',
-          'once in HiBob, once in Connecteam.',
-          'Now it syncs, from HiBob to Connecteam and back.',
-          'Duplicate checks. Full-time and contractor filtering.',
-          'Policies mapped country by country.',
-          'Private details stay private.',
-          'Validated in stages before it went live.'
         ] },
         { id: 'hubrural', title: 'Compliance & CRM Platform', feat: 'hubrural', desc: 'Retool and Postgres platform for Hub Rural, a UK land agency: AML compliance, a workflow engine, DocuSign and S3.', dur: 228, lyrics: [
           'A compliance and CRM platform',
