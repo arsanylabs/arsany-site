@@ -42,8 +42,8 @@ window.SITE = {
     {
       id: 'dentica', kind: 'album', title: 'Dentica',
       cover: { mark: 'D', logo: 'logos/dentica.png', logoTile: true, c1: '#4a4044', c2: '#1f1a17', pattern: 'rings' },
-      blurb: 'Dental practice management for Egypt, for solo doctors and clinics, on web and mobile. I founded it and I am building the MVP: a 41-table data model with soft deletes and append-only history, tested from unit level up to load.',
-      credits: [['Role', 'Founder'], ['Status', 'MVP in progress'], ['Stack', 'NestJS, Prisma, Postgres (Supabase), Better Auth, Expo, TanStack Query, Turborepo'], ['Market', 'Egypt']],
+      blurb: 'Dental practice management for Egypt, for solo doctors and clinics, on web and mobile. Arabic-first, with a dental chart drawn as real teeth. I founded it and built it, and it is now in closed beta.',
+      credits: [['Role', 'Founder'], ['Status', 'Closed beta'], ['Stack', 'NestJS, Prisma, Postgres (Supabase), Better Auth, Expo, TanStack Query, Turborepo'], ['Market', 'Egypt']],
       links: [],
       tracks: [
         { id: 'web', title: 'Dentica Web', desc: 'The practice management platform in the browser, for solo doctors and clinics.', dur: 214, lyrics: [
@@ -52,6 +52,45 @@ window.SITE = {
           'One product for the doctor working alone',
           'and for the clinic with a team.'
         ], popular: 1 },
+        { id: 'chart', title: 'A Chart That Looks Like Teeth', desc: 'The odontogram: real tooth artwork, in 2D and in a 3D jaw view.', dur: 232, popular: 6, lyrics: [
+          'A full adult dental chart,',
+          'drawn as real teeth, not boxes and letters.',
+          'Conditions are painted on the exact tooth and the exact surface.',
+          'Caries, fillings, crowns, implants, root canals, missing teeth.',
+          'Fourteen conditions, each with its own colour and a three-letter mark,',
+          'so colour is never the only signal.',
+          'A 3D jaw view beside the 2D chart.',
+          'And the chart is append-only:',
+          'remove a condition and it stays in the history.',
+          'Nothing clinical is ever destroyed.'
+        ] },
+        { id: 'arabic', title: 'Arabic First', desc: 'English, Modern Standard Arabic and Egyptian Arabic, right to left.', dur: 189, lyrics: [
+          'Arabic first, not Arabic also.',
+          'English, Modern Standard Arabic,',
+          'and Egyptian Arabic as its own language.',
+          'The whole interface flips right to left.',
+          'Priced in EGP, scheduled on Cairo time.'
+        ] },
+        { id: 'permissions', title: 'Everyone Sees Their Job', desc: 'Granular permissions in six plain-English bundles, scopable per branch.', dur: 207, lyrics: [
+          'Granular permissions,',
+          'grouped into six plain-English bundles.',
+          'Front desk, clinical, diagnosis and prescribing, billing, treatments, and more.',
+          'Each one can be scoped to a single branch.',
+          'A receptionist can run the front desk at one branch',
+          'and see nothing at another.',
+          'Every permission is written for the person ticking the box.'
+        ] },
+        { id: 'whatsapp', title: 'WhatsApp', desc: 'Appointment reminders queued by the server and sent from staff WhatsApp.', dur: 178, lyrics: [
+          'In Egypt, patients live on WhatsApp.',
+          'The server queues the appointment reminders.',
+          'Staff send them from their own WhatsApp, in one click.',
+          'No consent, no message.'
+        ] },
+        { id: 'library', title: 'Day One', desc: 'A curated treatment library, so no clinic starts from an empty price list.', dur: 164, lyrics: [
+          'No clinic should start from an empty database.',
+          'Every new account begins with a curated treatment library.',
+          'Then makes the price list its own.'
+        ] },
         { id: 'data-model', title: '41 Tables', desc: 'The data model: 41 tables, soft deletes and append-only history.', dur: 203, lyrics: [
           'Underneath it all, a 41-table data model.',
           'Soft deletes,',
