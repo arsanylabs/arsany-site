@@ -270,6 +270,8 @@ section.block > h2 { margin-bottom: 16px; }
 .logo-mark.solo { max-width: 72cqi; max-height: 40cqi; }
 .logo-mark.tile.solo { width: 52cqi; height: 52cqi; }
 .guest-logo img.tile { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
+.feat-block h2 { font-size: 1rem; margin-bottom: 12px; }
+.feat-line { font-weight: 600; opacity: .85; }
 .guests { display: flex; flex-wrap: wrap; gap: 12px; }
 .guest { display: flex; align-items: center; gap: 14px; padding: 10px 20px 10px 10px; border-radius: 999px; background: var(--panel-2); text-decoration: none; }
 a.guest:hover { background: var(--raise); }
@@ -625,7 +627,7 @@ a.guest:hover { background: var(--raise); }
         '<div class="rel-cover">' + cover(r) + '</div>' +
         '<div class="hero-text"><div class="eyebrow">' + KIND[r.kind] + '</div><h1>' + esc(r.title) + '</h1>' +
         '<p class="lede">' + esc(r.blurb) + '</p><div class="meta">' +
-          '<span class="who"><span class="avatar-xs" aria-hidden="true"><img src="img/arsany.jpg" alt=""></span>' + esc(artists(r)) + '</span>' +
+          '<span class="who"><span class="avatar-xs" aria-hidden="true"><img src="img/arsany.jpg" alt=""></span>' + esc(artists(r)) + (feats.length ? ' <span class="feat-line">feat. ' + esc(feats.map(function (id) { return co(id).name; }).join(', ')) + '</span>' : '') + '</span>' +
           (r.year ? '<i></i><span>' + r.year + '</span>' : '') +
           '<i></i><span>' + songs(r) + '</span>' +
           (label ? '<i></i><span>℗ <a class="rel-link" href="#' + label.id + '">' + esc(label.title) + '</a></span>' : '') +
@@ -633,17 +635,17 @@ a.guest:hover { background: var(--raise); }
         '</div></div></header>' +
       '<div class="actions"><button class="play-big play-toggle" type="button" data-list="rel:' + r.id + '"></button>' + links +
         '<a class="pill" href="#' + (r.with ? 'collabs' : 'discography') + '">Back to Arsany</a></div>' +
-      '<section class="block"><div class="tracks-head" aria-hidden="true"><span>#</span><span>Title</span>' + CLOCK + '</div>' +
-        '<ol class="tracks album-list">' + rows('rel:' + r.id, false) + '</ol></section>' +
-      '<section class="block"><h2>Credits</h2><dl class="facts credits">' +
-        r.credits.map(function (c) { return '<div><dt>' + esc(c[0]) + '</dt><dd>' + esc(c[1]) + '</dd></div>'; }).join('') +
-      '</dl></section>' +
-      (feats.length ? '<section class="block"><h2>Featuring</h2><div class="guests">' + feats.map(function (id) {
+      (feats.length ? '<section class="block feat-block"><h2>Featuring</h2><div class="guests">' + feats.map(function (id) {
         var c = co(id);
         var inner = '<span class="guest-logo">' + (c.logo ? '<img' + (c.logoTile ? ' class="tile"' : '') + ' src="' + esc(c.logo) + '" alt="">' : esc(c.mark)) + '</span>' +
           '<span><strong>' + esc(c.name) + '</strong>' + (c.website ? '<span class="sub">' + esc(c.website.replace(/^https?:\/\//, '')) + '</span>' : '') + '</span>';
         return c.website ? '<a class="guest" href="' + esc(c.website) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<div class="guest">' + inner + '</div>';
       }).join('') + '</div></section>' : '') +
+      '<section class="block"><div class="tracks-head" aria-hidden="true"><span>#</span><span>Title</span>' + CLOCK + '</div>' +
+        '<ol class="tracks album-list">' + rows('rel:' + r.id, false) + '</ol></section>' +
+      '<section class="block"><h2>Credits</h2><dl class="facts credits">' +
+        r.credits.map(function (c) { return '<div><dt>' + esc(c[0]) + '</dt><dd>' + esc(c[1]) + '</dd></div>'; }).join('') +
+      '</dl></section>' +
       (onLabel.length ? '<section class="block"><h2>Released on ' + esc(r.title) + '</h2><div class="albums">' + onLabel.map(card).join('') + '</div></section>' : '') +
       '<section class="block" style="padding-bottom:32px"><h2>More by Arsany</h2><div class="albums">' + more.map(card).join('') + '</div></section>';
   }
