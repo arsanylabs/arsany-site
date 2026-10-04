@@ -260,31 +260,21 @@ window.SITE = {
           'I designed it, validated it with the shift leads, and built it.',
           'The old numbers drifted three to nine points apart.',
           'Now they reconcile to within about a point.',
-          'Gaps classified live.',
+          'A timeline of every shift, with gaps classified live',
+          'and reviewed right there on the timeline.',
           'Vehicle detail. VSO tracking. Your region picked for you.',
           'Error monitoring that pings Slack before users do.',
           '216 tests behind it.',
           'Rolled out on a fixed date in Japan, Germany, the UK and the US.',
-          'The primary tool in every geography.'
+          'The primary tool in every geography.',
+          'Then extended for regional leadership with Ops Analytics:',
+          'the same single definition of utilisation, with clear lines on who sees what.'
         ], popular: 3 },
-        { id: 'gap-review', title: 'Gap Review', feat: 'wayve', desc: 'The timeline and gap-review experience at the heart of shift utilisation.', dur: 181, lyrics: [
-          'A timeline of every shift.',
-          'Find the gap.',
-          'Classify it.',
-          'Explain it.',
-          'Designed with the shift leads who use it every day.'
-        ] },
         { id: 'shift-clock', title: 'Shift Utilisation Clock', feat: 'wayve', desc: 'An automatic shift clock with live utilisation for the current shift.', dur: 172, lyrics: [
           'A clock that knows which shift it is.',
           'Utilisation for the shift that is running right now.',
           'Switch region and it loads that region, never stale numbers.',
           'Built to an approved Wayve design.'
-        ] },
-        { id: 'ops-analytics', title: 'Ops Analytics', feat: 'wayve', desc: 'Utilisation for regional leadership, on one shared definition.', dur: 188, lyrics: [
-          'Regional leadership wanted the bigger picture.',
-          'The same utilisation, rolled up for them.',
-          'One definition of utilisation for everyone,',
-          'and clear lines on who sees what.'
         ] },
         { id: 'annotations-manager', title: 'Annotations Manager', feat: 'wayve', desc: 'Bulk assignment, reassignment and status tracking for annotation managers.', dur: 224, lyrics: [
           'Annotation work used to be assigned in spreadsheets.',
