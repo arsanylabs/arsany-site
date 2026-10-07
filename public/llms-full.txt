@@ -1,0 +1,97 @@
+# Arsany Milad
+
+> Senior fullstack engineer in Alexandria, Egypt. I build products end to end, from the database to the demo: TypeScript, Node.js and NestJS, React and React Native, PostgreSQL, Retool, Databricks and AWS. At Stackdrop I am the Retool engineer and product owner for Wayve's Fleet Systems & Insights tools, used across the UK, US, Germany and Japan. I also founded Dentica, an Arabic-first dental practice management platform now in closed beta.
+
+- Location: Alexandria, Egypt
+- Role: Senior Fullstack Engineer
+- Education: BSc in Computer Science, Alexandria University
+- Skills: TypeScript, Node.js, NestJS, React, React Native, Expo, Retool, PostgreSQL, Prisma, Supabase, Databricks, AWS, Docker, Product ownership
+- LinkedIn: https://www.linkedin.com/in/arsany-milad
+- GitHub: https://github.com/arsanylabs
+
+## Experience
+
+### Senior Software Engineer, Stackdrop (Apr 2024 – present)
+
+Remote-first software house headquartered in Athens. I work as a contractor across several client projects at once. The headline engagement is Wayve, where I am embedded with Fleet Operations as Retool engineer and product owner for the Fleet Systems & Insights portfolio, used across the UK, US, Germany and Japan. Alongside it, I build Hub Rural's compliance and CRM platform.
+
+- **Product Owner** (for Wayve): Not just tickets in, code out. Embedded with Wayve's Fleet Operations as product owner and builder. Understand the problem and the people who have it. Ask about the data, the owners, the permissions and the edge cases before they turn into production problems. Wireframes and prototypes to get everyone aligned. Build it, then launch it, train people on it, and support it live. Across Fleet Ops, Safety, QA and regional leadership, in four countries and their time zones.
+- **Shift Utilization Dashboard** (for Wayve): Shift monitoring used to live in Grafana, Slack, spreadsheets and vehicle-level views. Now it lives in one place. I designed it, validated it with the shift leads, and built it. The old numbers drifted three to nine points apart. Now they reconcile to within about a point. A timeline of every shift, with gaps classified live and reviewed right there on the timeline. Vehicle detail. VSO tracking. Your region picked for you. Error monitoring that pings Slack before users do. 216 tests behind it. Rolled out on a fixed date in Japan, Germany, the UK and the US. The primary tool in every geography. Then extended for regional leadership with Ops Analytics: the same single definition of utilisation, with clear lines on who sees what.
+- **Annotations Manager** (for Wayve): Annotation work used to be assigned in spreadsheets. Now managers do it in one app. Assign in bulk. Reassign. Track the status. Data syncs on its own. I took it to production, set up the users, and became the first point of contact for it.
+- **Annotations Queue** (for Wayve): A focused queue for each annotator. Work arrives in priority order, so nobody cherry-picks the easy ones. Comments on every disengagement. At local midnight in each geography, the day is swept and flushed. US, UK, Japan, Germany.
+- **Annotations Reporting** (for Wayve): Not stopping at the first version. Annotation data moves from Lakebase into Delta. Reporting and QA built on top. I introduced Lakebase to the team.
+- **Safety-Critical Interventions** (for Wayve): Safety numbers at the top. Click one, and you are in the individual intervention log. Click again, and you are watching the video. By vehicle. By time bucket. Exportable. Shipped soon after I joined.
+- **Compliance & CRM Platform** (for Hub Rural): A compliance and CRM platform for Hub Rural, a UK land agency. Retool on Postgres. AML compliance checks. A workflow engine for jobs and actions. S3 for the documents.
+- **Signed, Sent, Tracked** (for Hub Rural): Agreements go out through DocuSign. Signer status comes back on its own. When the wrong agreement was going out, I traced it to the root and fixed it, so every envelope and every status lands on the right agreement.
+- **Recurrence Engine** (for Hub Rural): Every night at one, it runs. It creates the next occurrence of every recurring action. Two runs can never create the same one twice. If an insert fails, nothing moves; it tries again tomorrow. A series that started on the 31st comes back to the 31st. Every two weeks on Tuesday means every two weeks on Tuesday.
+- **Monday Morning** (for Hub Rural): Monday, eight in the morning. Every employee gets their actions and their jobs for the week. The compliance team gets the compliance report. One query for everyone, then one email each, in the house style, light mode and dark.
+- **Hub Mobile** (for Hub Rural): The platform, in the field. All jobs, job details, tasks and actions, from a phone.
+- **Clienteling Platform**: A clienteling and retail data platform for a global spirits group. An admin web app, and a mobile app for the people on the shop floor. Retool and Retool Workflows, on Azure SQL Server. Customers, orders and products from every market's Magento store. I took it over from another engineer, with very little documentation.
+- **Ingestion, Rebuilt**: The first version reloaded everything, every time. I rebuilt it to be incremental. Each run picks up from the last good one, with a day of overlap on purpose, one market at a time. Every row gets an ID derived from what it is, so loading the same data twice never duplicates it. Retries back off, with jitter.
+- **Under the Ceiling**: The data kept growing. Retool's memory did not. Orders stream through in batches of a hundred. Half the concurrency, split by market. And it stays under the ceiling.
+- **Clinic Platform**: A clinic management platform for a healthcare client. A layered Postgres data model: clinics, staff, patients, appointments, billing and consent. Hierarchical access control, so each level sees what it should. Web and mobile apps, tablet-friendly, for running the clinic in real time and capturing patient records.
+- **Entertainment & Data Platform**: An entertainment and data platform. A mobile dashboard built in FlutterFlow, published on the App Store. SQL tuned and indexed: load times cut by about half. Legacy sign-in moved to Amazon Cognito.
+
+### Software Engineer, Spare (Sep 2022 – Mar 2024)
+
+Spare, Schools Made Smarter. My first job, before Stackdrop: building features end to end, from the MySQL schema through the Node.js APIs to the Angular front end.
+
+- **End to End**: Features, end to end. The MySQL schema. The Node.js APIs. The Angular front end.
+- **The Big Deal**: The engineering behind one of the largest client deals.
+- **Seeders, Biome and Husky**: Database seeders. Biome and Husky, so the checks run before every commit.
+
+## Projects
+
+### Dentica (Closed beta)
+
+Dental practice management for Egypt, for solo doctors and clinics, on web and mobile. Arabic-first, with a dental chart drawn as real teeth. I founded it and built it, and it is now in closed beta.
+
+Stack: NestJS, Prisma, Postgres (Supabase), Better Auth, Expo, TanStack Query, Turborepo
+
+- **Dentica Web**: Dentica Web is the practice management platform in the browser. Built for solo doctors and for clinics in Egypt. One product for the doctor working alone and for the clinic with a team.
+- **A Chart That Looks Like Teeth**: A full adult dental chart, drawn as real teeth, not boxes and letters. Conditions are painted on the exact tooth and the exact surface. Caries, fillings, crowns, implants, root canals, missing teeth. Fourteen conditions, each with its own colour and a three-letter mark, so colour is never the only signal. A 3D jaw view beside the 2D chart. And the chart is append-only: remove a condition and it stays in the history. Nothing clinical is ever destroyed.
+- **Arabic First**: Arabic first, not Arabic also. English, Modern Standard Arabic, and Egyptian Arabic as its own language. The whole interface flips right to left. Priced in EGP, scheduled on Cairo time.
+- **Everyone Sees Their Job**: Granular permissions, grouped into six plain-English bundles. Front desk, clinical, diagnosis and prescribing, billing, treatments, and more. Each one can be scoped to a single branch. A receptionist can run the front desk at one branch and see nothing at another. Every permission is written for the person ticking the box.
+- **WhatsApp**: In Egypt, patients live on WhatsApp. The server queues the appointment reminders. Staff send them from their own WhatsApp, in one click. No consent, no message.
+- **Day One**: No clinic should start from an empty database. Every new account begins with a curated treatment library. Then makes the price list its own.
+- **41 Tables**: Underneath it all, a 41-table data model. Soft deletes, so nothing a clinic records is lost by accident. Append-only history, so every change can be traced.
+- **The API**: The API is NestJS. Prisma talks to Postgres. Postgres lives on Supabase.
+- **Sign In**: Who gets in, and as whom. Sign-in runs on Better Auth.
+- **One Repo**: Web, mobile and the API. One Turborepo holds them all.
+- **Tested at Every Layer**: Unit tests with Vitest, for the logic on its own. API end-to-end tests that run against a real Postgres, not mocks. They cover sign-in, roles and permissions, patients, appointments, charting, invoices and payments. Even two people accepting the same invitation at once. Playwright drives the web app in a real browser: onboarding, sessions, invoices, WhatsApp, every language and accessibility. Jest for the mobile screens. And k6 load tests: baseline, stress, a full user journey, and a breakpoint run to find where it falls over, watched live in Grafana.
+- **Dentica Lite**: Dentica Lite is the mobile app. Built with Expo, on iOS and Android. Same platform, same API, different access. It covers the day in the chair and at the front desk: the schedule, patients, charting, invoices and payments. What each person can do follows their permissions, never their job title. The heavy admin stays on the web.
+
+### Viorette (Venture)
+
+Sterling silver jewelry for women in Egypt and the MENA region. A year-long side hustle with my cofounder: we did everything together, from the store and the designs to marketing and shipping, and grew it to 300 orders a month at break-even before I exited.
+
+Stack: WooCommerce, then Shopify, with Bosta for delivery
+
+- **The Store**: Sterling silver jewelry for women in Egypt and MENA. We started the store on WooCommerce. Then moved it to Shopify.
+- **Designs**: The jewelry designs and the brand look. Worked out together, my cofounder and me.
+- **Marketing**: No agency. We ran the marketing ourselves.
+- **Delivery**: Orders shipped across Egypt with Bosta.
+- **300 a Month**: A side hustle, one year long. We grew it to 300 orders a month. And it broke even.
+- **The Exit**: Then I stepped away. To found Dentica, a product closer to what I do best.
+
+### Retool Bridge (Project)
+
+Open source. Runs Retool Apps-as-Code React apps on your own machine, driven over MCP, with each session isolated in its own git worktree and read-only by default.
+
+- **Retool Bridge**: Retool Apps-as-Code, running on your own machine. React apps, driven over MCP. Open source, built at Stackdrop. Around 90 tests behind it. Every session gets its own git worktree. Experiments never touch your checkout. Read-only by default. Nothing writes back to Retool unless you allow it.
+
+### Marathon Navigator (Live)
+
+A live mobile app for charity youth competitions, in English and Arabic with full right-to-left support.
+
+Stack: React Native, Expo, Supabase
+
+- **Marathon Navigator**: A live app for charity youth competitions. React Native and Expo on the phone. Supabase behind it. English and Arabic. Full right-to-left layouts.
+
+### Knowledge Hub (Project)
+
+A self-hosted RAG knowledge assistant. Upload your own documents and ask them questions in plain language, answered by a local DeepSeek model. Nothing leaves the machine, so it works fully offline.
+
+Stack: Angular 19, Node.js, Express, FastAPI, PostgreSQL, DeepSeek
+
+- **Knowledge Hub**: Bring your own knowledge. Text files, JSON. Stored in PostgreSQL with their metadata. Ask a question in plain language. FastAPI generates the embeddings. Retrieval finds the relevant pieces. A local DeepSeek model writes the answer. Angular 19 and Material on the front. Node.js and Express behind it, built domain-driven. No API keys. No cloud. Nothing leaves the machine. It even runs air-gapped.

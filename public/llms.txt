@@ -1,0 +1,29 @@
+# Arsany Milad
+
+> Senior fullstack engineer in Alexandria, Egypt. I build products end to end, from the database to the demo: TypeScript, Node.js and NestJS, React and React Native, PostgreSQL, Retool, Databricks and AWS. At Stackdrop I am the Retool engineer and product owner for Wayve's Fleet Systems & Insights tools, used across the UK, US, Germany and Japan. I also founded Dentica, an Arabic-first dental practice management platform now in closed beta.
+
+- Location: Alexandria, Egypt
+- Role: Senior Fullstack Engineer
+- Education: BSc in Computer Science, Alexandria University
+- Skills: TypeScript, Node.js, NestJS, React, React Native, Expo, Retool, PostgreSQL, Prisma, Supabase, Databricks, AWS, Docker, Product ownership
+- LinkedIn: https://www.linkedin.com/in/arsany-milad
+- GitHub: https://github.com/arsanylabs
+
+## Pages
+
+- [Résumé](https://portfolio.arsanylabs.workers.dev/resume): full work history and projects as plain HTML
+- [Full text](https://portfolio.arsanylabs.workers.dev/llms-full.txt): everything on the site as Markdown
+- [Interactive portfolio](https://portfolio.arsanylabs.workers.dev/): the same content as a music-player style site
+
+## Experience
+
+- Senior Software Engineer, Stackdrop (Apr 2024 – present): Remote-first software house headquartered in Athens. I work as a contractor across several client projects at once. The headline engagement is Wayve, where I am embedded with Fleet Operations as Retool engineer and product owner for the Fleet Systems & Insights portfolio, used across the UK, US, Germany and Japan. Alongside it, I build Hub Rural's compliance and CRM platform.
+- Software Engineer, Spare (Sep 2022 – Mar 2024): Spare, Schools Made Smarter. My first job, before Stackdrop: building features end to end, from the MySQL schema through the Node.js APIs to the Angular front end.
+
+## Projects
+
+- Dentica: Dental practice management for Egypt, for solo doctors and clinics, on web and mobile. Arabic-first, with a dental chart drawn as real teeth. I founded it and built it, and it is now in closed beta.
+- Viorette: Sterling silver jewelry for women in Egypt and the MENA region. A year-long side hustle with my cofounder: we did everything together, from the store and the designs to marketing and shipping, and grew it to 300 orders a month at break-even before I exited.
+- Retool Bridge: Open source. Runs Retool Apps-as-Code React apps on your own machine, driven over MCP, with each session isolated in its own git worktree and read-only by default.
+- Marathon Navigator: A live mobile app for charity youth competitions, in English and Arabic with full right-to-left support.
+- Knowledge Hub: A self-hosted RAG knowledge assistant. Upload your own documents and ask them questions in plain language, answered by a local DeepSeek model. Nothing leaves the machine, so it works fully offline.
