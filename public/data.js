@@ -7,6 +7,7 @@
      current   collabs only: true while you're still working there
      label     optional id of a collab the release came out of ("℗ Stackdrop")
      year      optional, shown in the release header
+     tagline   solo releases: one line shown on the Projects card
      cover     generated cover art: mark (1-2 letters), two colors, pattern
                (rings | dots | grid | stripes | split), and an optional logo under
                public/logos/ shown instead of the mark (logoTile: true for square
@@ -40,7 +41,7 @@ window.SITE = {
 
   releases: [
     {
-      id: 'dentica', kind: 'album', title: 'Dentica',
+      id: 'dentica', kind: 'album', title: 'Dentica', tagline: 'Arabic-first dental practice management, on web and mobile.',
       cover: { mark: 'D', logo: 'logos/dentica.png', logoTile: true, c1: '#4a4044', c2: '#1f1a17', pattern: 'rings' },
       blurb: 'Dental practice management for Egypt, for solo doctors and clinics, on web and mobile. Arabic-first, with a dental chart drawn as real teeth. I founded it and built it, and it is now in closed beta.',
       credits: [['Role', 'Founder'], ['Status', 'Closed beta'], ['Stack', 'NestJS, Prisma, Postgres (Supabase), Better Auth, Expo, TanStack Query, Turborepo'], ['Market', 'Egypt']],
@@ -138,7 +139,7 @@ window.SITE = {
       ]
     },
     {
-      id: 'viorette', kind: 'ep', title: 'Viorette',
+      id: 'viorette', kind: 'ep', title: 'Viorette', tagline: 'Silver jewelry brand I cofounded, grown to 300 orders a month.',
       cover: { mark: 'V', logo: 'logos/viorette.png', c1: '#7a3d6e', c2: '#2b1328', pattern: 'dots' },
       blurb: 'Sterling silver jewelry for women in Egypt and the MENA region. A year-long side hustle with my cofounder: we did everything together, from the store and the designs to marketing and shipping, and grew it to 300 orders a month at break-even before I exited.',
       credits: [['Role', 'Cofounder'], ['Run', 'One year, as a side hustle'], ['Peak', '300 orders a month, break-even'], ['Stack', 'WooCommerce, then Shopify, with Bosta for delivery'], ['Market', 'Egypt and MENA']],
@@ -174,7 +175,7 @@ window.SITE = {
       ]
     },
     {
-      id: 'retool-bridge', kind: 'single', title: 'Retool Bridge', label: 'stackdrop',
+      id: 'retool-bridge', kind: 'single', title: 'Retool Bridge', label: 'stackdrop', tagline: 'Run Retool Apps-as-Code locally, driven over MCP.',
       cover: { mark: 'RB', c1: '#3d4ad6', c2: '#121641', pattern: 'grid' },
       blurb: 'Open source. Runs Retool Apps-as-Code React apps on your own machine, driven over MCP, with each session isolated in its own git worktree and read-only by default.',
       credits: [['Role', 'Author'], ['License', 'Open source'], ['Tests', '~90']],
@@ -195,7 +196,7 @@ window.SITE = {
       ]
     },
     {
-      id: 'marathon-navigator', kind: 'single', title: 'Marathon Navigator', year: 'Live',
+      id: 'marathon-navigator', kind: 'single', title: 'Marathon Navigator', year: 'Live', tagline: 'Bilingual mobile app for charity youth competitions.',
       cover: { mark: 'MN', logo: 'logos/marathon-navigator.svg', logoTile: true, c1: '#ffc00a', c2: '#7a4a00', pattern: 'stripes' },
       blurb: 'A live mobile app for charity youth competitions, in English and Arabic with full right-to-left support.',
       credits: [['Role', 'Builder'], ['Stack', 'React Native, Expo, Supabase'], ['Languages', 'English, Arabic (RTL)']],
@@ -211,7 +212,7 @@ window.SITE = {
       ]
     },
     {
-      id: 'knowledge-hub', kind: 'single', title: 'Knowledge Hub',
+      id: 'knowledge-hub', kind: 'single', title: 'Knowledge Hub', tagline: 'Self-hosted, offline RAG assistant for your own documents.',
       cover: { mark: 'KH', c1: '#8a5cf6', c2: '#2a1a5c', pattern: 'dots' },
       blurb: 'A self-hosted RAG knowledge assistant. Upload your own documents and ask them questions in plain language, answered by a local DeepSeek model. Nothing leaves the machine, so it works fully offline.',
       credits: [['Role', 'Author'], ['License', 'Open source'], ['Stack', 'Angular 19, Node.js, Express, FastAPI, PostgreSQL, DeepSeek']],
