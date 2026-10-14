@@ -635,11 +635,11 @@ a.guest:hover { background: var(--raise); }
     var feat = featuring(r);
     return '<a class="feature" href="#' + r.id + '"><div class="feature-art">' + cover(r) + '</div><div class="feature-text">' +
       '<div class="eyebrow">' + KIND[r.kind] + (r.current ? ' <span class="now-tag">Now</span>' : '') + '</div>' +
-      '<h3>' + esc(artists(r)) + '</h3><p class="role">' + esc(credit(r, 'Role') + ' · ' + (credit(r, 'Dates') || r.year)) + '</p><p>' + esc(r.blurb) + '</p>' +
+      '<h3>' + esc(artists(r)) + '</h3><p class="role">' + esc((r.role || credit(r, 'Role')) + ' · ' + (credit(r, 'Dates') || r.year)) + '</p><p>' + esc(r.blurb) + '</p>' +
       '<p class="sub">' + songs(r) + (feat.length ? ' · featuring ' + esc(feat.map(function (id) { return co(id).name; }).join(', ')) : '') + '</p></div></a>';
   }
   function card(r) {
-    var line = r.with ? credit(r, 'Role') : r.tagline;
+    var line = r.with ? (r.role || credit(r, 'Role')) : r.tagline;
     var status = r.with ? (credit(r, 'Dates') || r.year) : (credit(r, 'Status') || r.year || credit(r, 'License') || credit(r, 'Role'));
     return '<a class="album" href="#' + r.id + '">' + cover(r) +
       '<div><h3>' + esc(r.title) + '</h3>' + (line ? '<p class="tag">' + esc(line) + '</p>' : '') +

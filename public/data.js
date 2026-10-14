@@ -8,6 +8,7 @@
      label     optional id of a collab the release came out of ("℗ Stackdrop")
      year      optional, shown in the release header
      tagline   solo releases: one line shown on the Projects card
+     role      collabs only: role shown on the Experience card (defaults to the Role credit)
      cover     generated cover art: mark (1-2 letters), two colors, pattern
                (rings | dots | grid | stripes | split), and an optional logo under
                public/logos/ shown instead of the mark (logoTile: true for square
@@ -239,6 +240,7 @@ window.SITE = {
       id: 'stackdrop', kind: 'collab', with: 'stackdrop', title: 'Stackdrop', current: true,
       cover: { mark: 'SD', c1: '#f5a512', c2: '#5c3a06', pattern: 'split' },
       year: 'Apr 2024 – now',
+      role: 'Retool engineer & product owner for Wayve',
       blurb: 'Remote-first software house headquartered in Athens. I work as a contractor across several client projects at once. The headline engagement is Wayve, where I am embedded with Fleet Operations as Retool engineer and product owner for the Fleet Systems & Insights portfolio, used across the UK, US, Germany and Japan. Alongside it, I build Hub Rural\'s compliance and CRM platform.',
       credits: [['Role', 'Senior Software Engineer'], ['Terms', 'Contract'], ['Dates', 'Apr 2024 – present'], ['HQ', 'Athens, Greece']],
       links: [],
