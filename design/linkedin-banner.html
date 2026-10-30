@@ -33,6 +33,7 @@ h1 span{color:#3fe08a}
 .c::before{content:"";position:absolute;inset:0;background:var(--pat,none)}
 .c img{position:relative;max-width:62%;max-height:62%}
 .c img.tile{width:58%;height:58%;max-width:none;max-height:none;border-radius:18%;}
+.c img.tile.flat{border-radius:0;box-shadow:none;}
 .c .lbl{position:absolute;left:12px;bottom:10px;font-size:13px;font-weight:800;letter-spacing:.02em;text-shadow:0 1px 6px rgba(0,0,0,.5)}
 .c1{left:0;top:62px;background:linear-gradient(135deg,#4a4044,#1f1a17);--pat:repeating-radial-gradient(circle at 28% 118%,transparent 0 14px,rgba(0,0,0,.18) 14px 16px);transform:rotate(-8deg);z-index:1}
 .c2{left:140px;top:10px;background:linear-gradient(135deg,#f5a512,#5c3a06);transform:rotate(-1deg);z-index:3;width:210px;height:210px}
@@ -60,7 +61,7 @@ h1 span{color:#3fe08a}
 
 <div class="covers">
   <div class="c c1"><img class="tile" src="../public/logos/dentica.png" alt=""><span class="lbl">Dentica</span></div>
-  <div class="c c2"><div class="feat"><span>feat. Wayve</span></div><img class="tile" src="../public/logos/stackdrop.png" alt=""><span class="lbl">Arsany × Stackdrop</span></div>
+  <div class="c c2"><div class="feat"><span>feat. Wayve</span></div><img class="tile flat" src="../public/logos/stackdrop.svg" alt=""><span class="lbl">Arsany × Stackdrop</span></div>
   <div class="c c3"><img class="tile" src="../public/logos/marathon-navigator.svg" alt=""><span class="lbl">Marathon Navigator</span></div>
 </div>
 

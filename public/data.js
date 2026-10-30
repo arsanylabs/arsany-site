@@ -30,11 +30,12 @@
      logo      path under public/, e.g. 'logos/wayve.svg' (null falls back to `mark`)
      logoTile  true when the logo is a square app icon with its own background
                (shown as a rounded tile); otherwise the logo is drawn in white
+     logoFlat  true when a tile logo has its own corner shape, so it isn't rounded
      mark      1-2 letters used on the cover when there's no logo */
 
 window.SITE = {
   companies: {
-    stackdrop: { name: 'Stackdrop', website: 'https://stackdrop.co', logo: 'logos/stackdrop.png', logoTile: true, mark: 'SD' },
+    stackdrop: { name: 'Stackdrop', website: 'https://stackdrop.co', logo: 'logos/stackdrop.svg', logoTile: true, logoFlat: true, mark: 'SD' },
     hubrural: { name: 'Hub Rural', website: 'https://www.hubrural.co.uk', logo: 'logos/hubrural.png', logoTile: true, mark: 'HR' },
     spare: { name: 'Spare', website: 'https://www.paywithspare.com', logo: 'logos/spare.png', logoTile: true, mark: 'S' },
     wayve: { name: 'Wayve', website: 'https://wayve.ai', logo: 'logos/wayve.png', logoTile: true, mark: 'W' }
