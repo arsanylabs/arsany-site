@@ -18,9 +18,9 @@ const PERSON = {
   city: 'Alexandria, Egypt',
   linkedin: 'https://www.linkedin.com/in/arsany-milad',
   github: 'https://github.com/arsanylabs',
-  education: 'BSc in Computer Science, Alexandria University',
-  summary: 'Senior fullstack engineer in Alexandria, Egypt. I build products end to end, from the database to the demo: TypeScript, Node.js and NestJS, React and React Native, PostgreSQL, Retool, Databricks and AWS. At Stackdrop I am the Retool engineer and product owner for Wayve\'s Fleet Systems & Insights tools, used across the UK, US, Germany and Japan. I also founded Dentica, an Arabic-first dental practice management platform now in closed beta.',
-  skills: ['TypeScript', 'Node.js', 'NestJS', 'React', 'React Native', 'Expo', 'Retool', 'PostgreSQL', 'Prisma', 'Supabase', 'Databricks', 'AWS', 'Docker', 'Product ownership']
+  education: 'Bachelor of Computer Science, Faculty of Computers and Data Science, Alexandria University (2019 to 2023)',
+  summary: 'Senior fullstack engineer in Alexandria, Egypt, with about 4 years in software. I build products end to end, from the database to the demo: TypeScript, Node.js and NestJS, React and React Native, PostgreSQL, Retool, Databricks and AWS. At Stackdrop I am embedded with Wayve as Retool engineer and product owner for the Fleet Systems & Insights tools, used across the UK, US, Germany and Japan: I lead discovery, requirements and demos, and build the tools myself, in weeks. I also founded Dentica, an Arabic-first dental practice management platform now in closed beta.',
+  skills: ['TypeScript', 'Node.js', 'NestJS', 'React', 'React Native', 'Expo', 'Angular', 'Python (FastAPI)', 'Retool', 'PostgreSQL', 'Prisma', 'Supabase', 'MySQL', 'Databricks', 'Lakebase', 'Kafka', 'AWS', 'Azure', 'Docker', 'GitHub Actions', 'Model Context Protocol (MCP)', 'Claude Code', 'RAG pipelines', 'Discovery and requirements', 'Product ownership']
 };
 const today = new Date().toISOString().slice(0, 10);
 

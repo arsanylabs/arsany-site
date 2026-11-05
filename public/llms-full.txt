@@ -1,11 +1,11 @@
 # Arsany Milad
 
-> Senior fullstack engineer in Alexandria, Egypt. I build products end to end, from the database to the demo: TypeScript, Node.js and NestJS, React and React Native, PostgreSQL, Retool, Databricks and AWS. At Stackdrop I am the Retool engineer and product owner for Wayve's Fleet Systems & Insights tools, used across the UK, US, Germany and Japan. I also founded Dentica, an Arabic-first dental practice management platform now in closed beta.
+> Senior fullstack engineer in Alexandria, Egypt, with about 4 years in software. I build products end to end, from the database to the demo: TypeScript, Node.js and NestJS, React and React Native, PostgreSQL, Retool, Databricks and AWS. At Stackdrop I am embedded with Wayve as Retool engineer and product owner for the Fleet Systems & Insights tools, used across the UK, US, Germany and Japan: I lead discovery, requirements and demos, and build the tools myself, in weeks. I also founded Dentica, an Arabic-first dental practice management platform now in closed beta.
 
 - Location: Alexandria, Egypt
 - Role: Senior Fullstack Engineer
-- Education: BSc in Computer Science, Alexandria University
-- Skills: TypeScript, Node.js, NestJS, React, React Native, Expo, Retool, PostgreSQL, Prisma, Supabase, Databricks, AWS, Docker, Product ownership
+- Education: Bachelor of Computer Science, Faculty of Computers and Data Science, Alexandria University (2019 to 2023)
+- Skills: TypeScript, Node.js, NestJS, React, React Native, Expo, Angular, Python (FastAPI), Retool, PostgreSQL, Prisma, Supabase, MySQL, Databricks, Lakebase, Kafka, AWS, Azure, Docker, GitHub Actions, Model Context Protocol (MCP), Claude Code, RAG pipelines, Discovery and requirements, Product ownership
 - LinkedIn: https://www.linkedin.com/in/arsany-milad
 - GitHub: https://github.com/arsanylabs
 
@@ -13,14 +13,16 @@
 
 ### Senior Software Engineer, Stackdrop (Apr 2024 – present)
 
-Remote-first software house headquartered in Athens. I work as a contractor across several client projects at once. The headline engagement is Wayve, where I am embedded with Fleet Operations as Retool engineer and product owner for the Fleet Systems & Insights portfolio, used across the UK, US, Germany and Japan. Alongside it, I build Hub Rural's compliance and CRM platform.
+Remote-first software house headquartered in Athens. I work as a contractor across several client projects at once. The headline engagement is Wayve, where I am embedded with Fleet Operations as Retool engineer and product owner for the Fleet Systems & Insights portfolio, used across the UK, US, Germany and Japan. Primary engineer on 5+ production apps, on a Retool platform used by 70+ people. Alongside it, I build Hub Rural's compliance and CRM platform.
 
-- **Product Owner** (for Wayve): Not just tickets in, code out. Embedded with Wayve's Fleet Operations as product owner and builder. Understand the problem and the people who have it. Ask about the data, the owners, the permissions and the edge cases before they turn into production problems. Wireframes and prototypes to get everyone aligned. Build it, then launch it, train people on it, and support it live. Across Fleet Ops, Safety, QA and regional leadership, in four countries and their time zones.
-- **Shift Utilization Dashboard** (for Wayve): Shift monitoring used to live in Grafana, Slack, spreadsheets and vehicle-level views. Now it lives in one place. I designed it, validated it with the shift leads, and built it. The old numbers drifted three to nine points apart. Now they reconcile to within about a point. A timeline of every shift, with gaps classified live and reviewed right there on the timeline. Vehicle detail. VSO tracking. Your region picked for you. Error monitoring that pings Slack before users do. 216 tests behind it. Rolled out on a fixed date in Japan, Germany, the UK and the US. The primary tool in every geography. Then extended for regional leadership with Ops Analytics: the same single definition of utilisation, with clear lines on who sees what.
-- **Annotations Manager** (for Wayve): Annotation work used to be assigned in spreadsheets. Now managers do it in one app. Assign in bulk. Reassign. Track the status. Data syncs on its own. I took it to production, set up the users, and became the first point of contact for it.
-- **Annotations Queue** (for Wayve): A focused queue for each annotator. Work arrives in priority order, so nobody cherry-picks the easy ones. Comments on every disengagement. At local midnight in each geography, the day is swept and flushed. US, UK, Japan, Germany.
-- **Annotations Reporting** (for Wayve): Not stopping at the first version. Annotation data moves from Lakebase into Delta. Reporting and QA built on top. I introduced Lakebase to the team.
-- **Safety-Critical Interventions** (for Wayve): Safety numbers at the top. Click one, and you are in the individual intervention log. Click again, and you are watching the video. By vehicle. By time bucket. Exportable. Shipped soon after I joined.
+- **Product Owner** (for Wayve): Not just tickets in, code out. Embedded with Wayve's Fleet Operations as product owner and builder. Understand the problem and the people who have it. Ask about the data, the owners, the permissions and the edge cases before they turn into production problems. I lead discovery, requirements and demos, and I am on every client call. Wireframes and prototypes to get everyone aligned. Build it, then launch it, train people on it, and support it live. Across Fleet Ops, Safety, QA and regional leadership, in four countries and their time zones. A junior engineer joined for about three months; I mentored them on Retool, UI and UX, and talking to clients. My tools were cited in the business case for a 24-month Retool extension. It was approved.
+- **Shift Utilization Dashboard** (for Wayve): Shift monitoring used to live in Grafana, Slack, spreadsheets and vehicle-level views. Now it lives in one place. I designed it, validated it with the shift leads, and built it. From mockups to a pilot in 27 days. React and TypeScript, on Databricks and Lakebase. The old numbers drifted three to nine points apart. Now they reconcile to within about a point. A timeline of every shift, with gaps classified live and reviewed right there on the timeline. Gap review is auditable: suggested reasons, and a full change history. When a data-drift bug orphaned hundreds of classified gaps, I found it and repaired them. Vehicle detail. VSO tracking. Your region picked for you. Error monitoring that pings Slack before users do. 216 tests behind it. Rolled out on a fixed date in Japan, Germany, the UK and the US, with me live in Slack, shipping fixes and feature requests. It replaced Grafana as fleet ops' main tool for utilisation. 30+ shift leads, regional leads and field engineers. 30,000+ gaps classified. 600+ reports published. Then extended for regional leadership with Ops Analytics: the same single definition of utilisation, with clear lines on who sees what.
+- **Annotations Manager** (for Wayve): Annotation campaigns used to be tracked in Excel. Now managers do it in one app. Build a campaign from saved filters, and assign it to a team. Assign in bulk. Reassign. Track the status. Data syncs on its own. A tested prototype in 15 days. Production use in 29. 18 annotators on 14 active campaigns. 30,000+ runs managed. I took it to production, set up the users, and became the first point of contact for it.
+- **Annotations Queue** (for Wayve): A focused queue for each annotator. Ask for work, and it is assigned automatically. Conflict guards, so nothing is ever assigned twice. Work arrives in priority order, so nobody cherry-picks the easy ones. Comments on every disengagement. At local midnight in each geography, the day is swept and flushed. US, UK, Japan, Germany.
+- **Annotations Reporting** (for Wayve): Not stopping at the first version. Databricks syncs into Lakebase. Annotation data moves back into Delta, with daily incremental reporting pipelines. Reporting and QA built on top. I introduced Lakebase to the team, to replace analytics databases misused for transactional work.
+- **Not the Annotators** (for Wayve): I built the platform to capture everything: assignment logic, comments, blocks and notes. So there was a year of turnaround data to read. The completion rate looked low. It was not slow annotators. It was missing tagging. So the team moved to the measure that holds up.
+- **Safety-Critical Interventions** (for Wayve): Safety numbers at the top. Click one, and you are in the individual intervention log. Click again, and you are watching the AV video, right there. By vehicle. By time bucket. In every time zone. Exportable. Shipped soon after I joined. Then vehicle safety operator metrics, co-delivered with operational excellence, the people team and the shift leads.
+- **Escalations, Routed** (for Wayve): About 350 escalation requests a week. Roughly 50 Slack posts a day, written by hand. Now they are automated. And incident.io syncs with ConnectTeam, so an incident reaches the people on shift, not everyone.
 - **Compliance & CRM Platform** (for Hub Rural): A compliance and CRM platform for Hub Rural, a UK land agency. Retool on Postgres. AML compliance checks. A workflow engine for jobs and actions. S3 for the documents.
 - **Signed, Sent, Tracked** (for Hub Rural): Agreements go out through DocuSign. Signer status comes back on its own. When the wrong agreement was going out, I traced it to the root and fixed it, so every envelope and every status lands on the right agreement.
 - **Recurrence Engine** (for Hub Rural): Every night at one, it runs. It creates the next occurrence of every recurring action. Two runs can never create the same one twice. If an insert fails, nothing moves; it tries again tomorrow. A series that started on the 31st comes back to the 31st. Every two weeks on Tuesday means every two weeks on Tuesday.
@@ -29,16 +31,17 @@ Remote-first software house headquartered in Athens. I work as a contractor acro
 - **Clienteling Platform**: A clienteling and retail data platform for a global spirits group. An admin web app, and a mobile app for the people on the shop floor. Retool and Retool Workflows, on Azure SQL Server. Customers, orders and products from every market's Magento store. I took it over from another engineer, with very little documentation.
 - **Ingestion, Rebuilt**: The first version reloaded everything, every time. I rebuilt it to be incremental. Each run picks up from the last good one, with a day of overlap on purpose, one market at a time. Every row gets an ID derived from what it is, so loading the same data twice never duplicates it. Retries back off, with jitter.
 - **Under the Ceiling**: The data kept growing. Retool's memory did not. Orders stream through in batches of a hundred. Half the concurrency, split by market. And it stays under the ceiling.
+- **The Handover**: The client asked for the platform to move to IBM. So I handed it over, fully. Onboarding sessions. Documentation on how Retool runs, how the app works, and the main workflows, so their team could take it from there.
 - **Clinic Platform**: A clinic management platform for a healthcare client. A layered Postgres data model: clinics, staff, patients, appointments, billing and consent. Hierarchical access control, so each level sees what it should. Web and mobile apps, tablet-friendly, for running the clinic in real time and capturing patient records.
-- **Entertainment & Data Platform**: An entertainment and data platform. A mobile dashboard built in FlutterFlow, published on the App Store. SQL tuned and indexed: load times cut by about half. Legacy sign-in moved to Amazon Cognito.
+- **Entertainment & Data Platform**: An entertainment and data platform. A mobile-friendly replica of the web app, built in FlutterFlow, published on the App Store. SQL tuned and indexed: the main web app's query load times cut by about half. Legacy sign-in moved to Amazon Cognito.
 
 ### Software Engineer, Spare (Sep 2022 – Mar 2024)
 
 Spare, Schools Made Smarter. My first job, before Stackdrop: building features end to end, from the MySQL schema through the Node.js APIs to the Angular front end.
 
-- **End to End**: Features, end to end. The MySQL schema. The Node.js APIs. The Angular front end.
-- **The Big Deal**: The engineering behind one of the largest client deals.
-- **Seeders, Biome and Husky**: Database seeders. Biome and Husky, so the checks run before every commit.
+- **End to End**: Features, end to end. The MySQL schema. The Node.js APIs. The tests. The Angular components.
+- **The Big Deal**: The work that helped close one of the company's largest client deals.
+- **Seeders, Biome and Husky**: Database seeders, and the flaky tests went away. Biome and Husky, so linting and formatting are the same for everyone, before every commit.
 
 ## Projects
 
@@ -82,11 +85,17 @@ Open source. Runs Retool Apps-as-Code React apps on your own machine, driven ove
 
 ### Marathon Navigator (Live)
 
-A live mobile app for charity youth competitions, in English and Arabic with full right-to-left support.
+A live mobile app for a charity's multi-team youth competitions: a live leaderboard, role-restricted score entry, QR attendance that works offline, and tournaments. In English and Arabic with full right-to-left support.
 
 Stack: React Native, Expo, Supabase
 
-- **Marathon Navigator**: A live app for charity youth competitions. React Native and Expo on the phone. Supabase behind it. English and Arabic. Full right-to-left layouts.
+- **Marathon Navigator**: A live app for a charity's youth competitions. Many teams, one live leaderboard. Only the right roles can enter scores. Attendance by QR code, buffered offline until the signal comes back. And tournaments. React Native and Expo on the phone. Supabase behind it. English and Arabic. Full right-to-left layouts.
+
+### Karouz (In progress)
+
+In progress. I am working with about 20 managing admins of a charity program to turn how they run it into requirements and a design direction, ahead of launching a testing platform for hundreds of children.
+
+- **Karouz**: About 20 admins run a charity program. I sit with them and turn how they run it into requirements and a design direction. Next: a testing platform for hundreds of children.
 
 ### Knowledge Hub (Project)
 

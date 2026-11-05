@@ -200,16 +200,38 @@ window.SITE = {
     {
       id: 'marathon-navigator', kind: 'single', title: 'Marathon Navigator', year: 'Live', tagline: 'Bilingual mobile app for charity youth competitions.',
       cover: { mark: 'MN', logo: 'logos/marathon-navigator.svg', logoTile: true, c1: '#ffc00a', c2: '#7a4a00', pattern: 'stripes' },
-      blurb: 'A live mobile app for charity youth competitions, in English and Arabic with full right-to-left support.',
+      blurb: 'A live mobile app for a charity\'s multi-team youth competitions: a live leaderboard, role-restricted score entry, QR attendance that works offline, and tournaments. In English and Arabic with full right-to-left support.',
       credits: [['Role', 'Builder'], ['Stack', 'React Native, Expo, Supabase'], ['Languages', 'English, Arabic (RTL)']],
       links: [],
       tracks: [
         { id: 'app', title: 'Marathon Navigator', desc: 'Live app for charity youth competitions, in English and Arabic.', dur: 207, lyrics: [
-          'A live app for charity youth competitions.',
+          'A live app for a charity\'s youth competitions.',
+          'Many teams, one live leaderboard.',
+          'Only the right roles can enter scores.',
+          'Attendance by QR code,',
+          'buffered offline until the signal comes back.',
+          'And tournaments.',
           'React Native and Expo on the phone.',
           'Supabase behind it.',
           'English and Arabic.',
           'Full right-to-left layouts.'
+        ] }
+      ]
+    },
+    {
+      id: 'karouz', kind: 'single', title: 'Karouz', year: 'In progress', tagline: 'A testing platform for a charity program, for hundreds of children.',
+      cover: { mark: 'K', c1: '#e0603a', c2: '#4a1a10', pattern: 'rings' },
+      blurb: 'In progress. I am working with about 20 managing admins of a charity program to turn how they run it into requirements and a design direction, ahead of launching a testing platform for hundreds of children.',
+      credits: [['Role', 'Builder'], ['Status', 'In progress'], ['For', 'Hundreds of children, about 20 admins']],
+      links: [],
+      tracks: [
+        { id: 'discovery', title: 'Karouz', desc: 'Turning how a charity program runs into requirements and a design direction.', dur: 181, lyrics: [
+          'About 20 admins run a charity program.',
+          'I sit with them',
+          'and turn how they run it',
+          'into requirements and a design direction.',
+          'Next: a testing platform',
+          'for hundreds of children.'
         ] }
       ]
     },
@@ -242,7 +264,7 @@ window.SITE = {
       cover: { mark: 'SD', c1: '#f5a512', c2: '#5c3a06', pattern: 'split' },
       year: 'Apr 2024 – now',
       role: 'Retool engineer & product owner for Wayve',
-      blurb: 'Remote-first software house headquartered in Athens. I work as a contractor across several client projects at once. The headline engagement is Wayve, where I am embedded with Fleet Operations as Retool engineer and product owner for the Fleet Systems & Insights portfolio, used across the UK, US, Germany and Japan. Alongside it, I build Hub Rural\'s compliance and CRM platform.',
+      blurb: 'Remote-first software house headquartered in Athens. I work as a contractor across several client projects at once. The headline engagement is Wayve, where I am embedded with Fleet Operations as Retool engineer and product owner for the Fleet Systems & Insights portfolio, used across the UK, US, Germany and Japan. Primary engineer on 5+ production apps, on a Retool platform used by 70+ people. Alongside it, I build Hub Rural\'s compliance and CRM platform.',
       credits: [['Role', 'Senior Software Engineer'], ['Terms', 'Contract'], ['Dates', 'Apr 2024 – present'], ['HQ', 'Athens, Greece']],
       links: [],
       tracks: [
@@ -252,56 +274,98 @@ window.SITE = {
           'Understand the problem and the people who have it.',
           'Ask about the data, the owners, the permissions and the edge cases',
           'before they turn into production problems.',
+          'I lead discovery, requirements and demos,',
+          'and I am on every client call.',
           'Wireframes and prototypes to get everyone aligned.',
           'Build it, then launch it, train people on it, and support it live.',
           'Across Fleet Ops, Safety, QA and regional leadership,',
-          'in four countries and their time zones.'
+          'in four countries and their time zones.',
+          'A junior engineer joined for about three months;',
+          'I mentored them on Retool, UI and UX, and talking to clients.',
+          'My tools were cited in the business case',
+          'for a 24-month Retool extension. It was approved.'
         ] },
-        { id: 'shift-dashboard', title: 'Shift Utilization Dashboard', feat: 'wayve', desc: 'The primary tool for shift monitoring, gap review and reporting in every Wayve geography.', dur: 236, lyrics: [
+        { id: 'shift-dashboard', title: 'Shift Utilization Dashboard', feat: 'wayve', desc: 'Mockups to pilot in 27 days. Replaced Grafana for fleet ops: 30,000+ gaps classified, 600+ reports published.', dur: 236, lyrics: [
           'Shift monitoring used to live in Grafana, Slack, spreadsheets',
           'and vehicle-level views.',
           'Now it lives in one place.',
           'I designed it, validated it with the shift leads, and built it.',
+          'From mockups to a pilot in 27 days.',
+          'React and TypeScript, on Databricks and Lakebase.',
           'The old numbers drifted three to nine points apart.',
           'Now they reconcile to within about a point.',
           'A timeline of every shift, with gaps classified live',
           'and reviewed right there on the timeline.',
+          'Gap review is auditable: suggested reasons, and a full change history.',
+          'When a data-drift bug orphaned hundreds of classified gaps,',
+          'I found it and repaired them.',
           'Vehicle detail. VSO tracking. Your region picked for you.',
           'Error monitoring that pings Slack before users do.',
           '216 tests behind it.',
-          'Rolled out on a fixed date in Japan, Germany, the UK and the US.',
-          'The primary tool in every geography.',
+          'Rolled out on a fixed date in Japan, Germany, the UK and the US,',
+          'with me live in Slack, shipping fixes and feature requests.',
+          'It replaced Grafana as fleet ops\' main tool for utilisation.',
+          '30+ shift leads, regional leads and field engineers.',
+          '30,000+ gaps classified. 600+ reports published.',
           'Then extended for regional leadership with Ops Analytics:',
           'the same single definition of utilisation, with clear lines on who sees what.'
         ], popular: 3 },
-        { id: 'annotations-manager', title: 'Annotations Manager', feat: 'wayve', desc: 'Bulk assignment, reassignment and status tracking for annotation managers.', dur: 224, lyrics: [
-          'Annotation work used to be assigned in spreadsheets.',
+        { id: 'annotations-manager', title: 'Annotations Manager', feat: 'wayve', desc: 'Replaced Excel campaign tracking. Prototype in 15 days, production in 29: 18 annotators, 14 campaigns, 30,000+ runs.', dur: 224, lyrics: [
+          'Annotation campaigns used to be tracked in Excel.',
           'Now managers do it in one app.',
+          'Build a campaign from saved filters, and assign it to a team.',
           'Assign in bulk. Reassign. Track the status.',
           'Data syncs on its own.',
+          'A tested prototype in 15 days. Production use in 29.',
+          '18 annotators on 14 active campaigns.',
+          '30,000+ runs managed.',
           'I took it to production, set up the users,',
           'and became the first point of contact for it.'
         ] },
         { id: 'allocation', title: 'Annotations Queue', feat: 'wayve', desc: 'A focused queue for annotators, prioritised so work cannot be cherry-picked.', dur: 198, lyrics: [
           'A focused queue for each annotator.',
+          'Ask for work, and it is assigned automatically.',
+          'Conflict guards, so nothing is ever assigned twice.',
           'Work arrives in priority order,',
           'so nobody cherry-picks the easy ones.',
           'Comments on every disengagement.',
           'At local midnight in each geography, the day is swept and flushed.',
           'US, UK, Japan, Germany.'
         ] },
-        { id: 'etl', title: 'Annotations Reporting', feat: 'wayve', desc: 'Annotation data from Lakebase into Delta, with QA and reporting on top. I introduced Lakebase to the team.', dur: 211, lyrics: [
+        { id: 'etl', title: 'Annotations Reporting', feat: 'wayve', desc: 'Databricks synced into Lakebase, with daily incremental reporting pipelines. I introduced Lakebase to the team.', dur: 211, lyrics: [
           'Not stopping at the first version.',
-          'Annotation data moves from Lakebase into Delta.',
+          'Databricks syncs into Lakebase.',
+          'Annotation data moves back into Delta,',
+          'with daily incremental reporting pipelines.',
           'Reporting and QA built on top.',
-          'I introduced Lakebase to the team.'
+          'I introduced Lakebase to the team,',
+          'to replace analytics databases misused for transactional work.'
         ] },
-        { id: 'sci', title: 'Safety-Critical Interventions', feat: 'wayve', desc: 'Connects the topline safety numbers to each intervention log and its video.', dur: 203, lyrics: [
+        { id: 'turnaround', title: 'Not the Annotators', feat: 'wayve', desc: 'A year of turnaround data showed missing tagging, not slow annotators, explained the low completion rate.', dur: 193, lyrics: [
+          'I built the platform to capture everything:',
+          'assignment logic, comments, blocks and notes.',
+          'So there was a year of turnaround data to read.',
+          'The completion rate looked low.',
+          'It was not slow annotators.',
+          'It was missing tagging.',
+          'So the team moved to the measure that holds up.'
+        ] },
+        { id: 'sci', title: 'Safety-Critical Interventions', feat: 'wayve', desc: 'Connects the topline safety numbers to each intervention log and its AV video, across time zones.', dur: 203, lyrics: [
           'Safety numbers at the top.',
           'Click one, and you are in the individual intervention log.',
-          'Click again, and you are watching the video.',
-          'By vehicle. By time bucket. Exportable.',
-          'Shipped soon after I joined.'
+          'Click again, and you are watching the AV video, right there.',
+          'By vehicle. By time bucket. In every time zone. Exportable.',
+          'Shipped soon after I joined.',
+          'Then vehicle safety operator metrics,',
+          'co-delivered with operational excellence, the people team and the shift leads.'
+        ] },
+        { id: 'escalations', title: 'Escalations, Routed', feat: 'wayve', desc: 'Automated about 350 escalation requests a week, and routed incidents to the people on shift.', dur: 188, lyrics: [
+          'About 350 escalation requests a week.',
+          'Roughly 50 Slack posts a day, written by hand.',
+          'Now they are automated.',
+          'And incident.io syncs with ConnectTeam,',
+          'so an incident reaches the people on shift,',
+          'not everyone.'
         ] },
         { id: 'hubrural', title: 'Compliance & CRM Platform', feat: 'hubrural', desc: 'Retool and Postgres platform for Hub Rural, a UK land agency: AML compliance, a workflow engine, DocuSign and S3.', dur: 228, lyrics: [
           'A compliance and CRM platform',
@@ -364,6 +428,14 @@ window.SITE = {
           'Half the concurrency, split by market.',
           'And it stays under the ceiling.'
         ] },
+        { id: 'retail-handover', title: 'The Handover', desc: 'The full technical handover to IBM, at the client\'s request.', dur: 174, lyrics: [
+          'The client asked for the platform to move to IBM.',
+          'So I handed it over, fully.',
+          'Onboarding sessions.',
+          'Documentation on how Retool runs,',
+          'how the app works, and the main workflows,',
+          'so their team could take it from there.'
+        ] },
         { id: 'healthcare', title: 'Clinic Platform', desc: 'A clinic management platform on a layered Postgres data model with hierarchical access.', dur: 187, lyrics: [
           'A clinic management platform for a healthcare client.',
           'A layered Postgres data model:',
@@ -372,12 +444,12 @@ window.SITE = {
           'Web and mobile apps, tablet-friendly,',
           'for running the clinic in real time and capturing patient records.'
         ] },
-        { id: 'entertainment', title: 'Entertainment & Data Platform', desc: 'A FlutterFlow app on the App Store, faster SQL, and sign-in moved to Cognito.', dur: 201, lyrics: [
+        { id: 'entertainment', title: 'Entertainment & Data Platform', desc: 'Query load times cut about 50%, sign-in moved to Cognito, and a mobile replica in FlutterFlow.', dur: 201, lyrics: [
           'An entertainment and data platform.',
-          'A mobile dashboard built in FlutterFlow,',
+          'A mobile-friendly replica of the web app, built in FlutterFlow,',
           'published on the App Store.',
           'SQL tuned and indexed:',
-          'load times cut by about half.',
+          'the main web app\'s query load times cut by about half.',
           'Legacy sign-in moved to Amazon Cognito.'
         ] }
       ]
@@ -390,20 +462,22 @@ window.SITE = {
       credits: [['Role', 'Software Engineer'], ['Dates', 'Sep 2022 – Mar 2024'], ['Location', 'Remote'], ['Came before', 'Stackdrop']],
       links: [],
       tracks: [
-        { id: 'features', title: 'End to End', desc: 'Features from the MySQL schema through Node.js APIs to Angular.', dur: 214, lyrics: [
+        { id: 'features', title: 'End to End', desc: 'Features from the MySQL schema through Node.js APIs and tests to Angular.', dur: 214, lyrics: [
           'Features, end to end.',
           'The MySQL schema.',
           'The Node.js APIs.',
-          'The Angular front end.'
+          'The tests.',
+          'The Angular components.'
         ] },
-        { id: 'big-deal', title: 'The Big Deal', desc: 'Engineering work supporting one of the largest client deals.', dur: 197, lyrics: [
-          'The engineering behind',
-          'one of the largest client deals.'
+        { id: 'big-deal', title: 'The Big Deal', desc: 'Work that supported closing one of the company\'s largest client deals.', dur: 197, lyrics: [
+          'The work that helped close',
+          'one of the company\'s largest client deals.'
         ] },
-        { id: 'tooling', title: 'Seeders, Biome and Husky', desc: 'Database seeders plus Biome and Husky for a cleaner, faster dev loop.', dur: 168, lyrics: [
-          'Database seeders.',
+        { id: 'tooling', title: 'Seeders, Biome and Husky', desc: 'Database seeders that cut flaky tests, plus Biome and Husky for consistent linting and formatting.', dur: 168, lyrics: [
+          'Database seeders,',
+          'and the flaky tests went away.',
           'Biome and Husky,',
-          'so the checks run before every commit.'
+          'so linting and formatting are the same for everyone, before every commit.'
         ] }
       ]
     }
